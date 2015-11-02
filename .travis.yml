@@ -18,7 +18,7 @@ script:
   - ls -alF
   - casperjs --version
   - cd sprint_5
-  - javac -cp ./src:./tools/junit.jar -d ./bin ./src/controler/*.java ./src/model/*.java ./src/view/*.java
+  - javac -cp ./src:./bin:./tools/junit.jar -d ./bin ./src/controler/*.java ./src/model/*.java ./src/view/*.java
   - cd bin
   - java -cp .:../../junit.jar:./controler controler.MakeOPTIweb
   - java -cp .:../../junit.jar:./controler model.MakeOPTIwebTest
