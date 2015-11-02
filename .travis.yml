@@ -9,6 +9,10 @@ before_script:
   - tar -xvf /tmp/casper.tar.gz
   - export PATH=$PATH:$PWD/casperjs-1.0.3/bin/
   - ls ./src-highlite -la
+  - cd ./src-highlite
+  - ./configure
+  - make
+  - make install
 language: java
 script:
   - java -version
