@@ -15,7 +15,7 @@ var SUJETS=[
 ["ApexEComm","Application et tutoriel Oracle Apex pour un site d'e-commerce"],
 ["Archeologie","Groupe de recherche Chasséen Méridional"],
 ["Architekt","Architekt"],
-["BDM NoSQL","Développement d’un logiciel de conception d’une base de données multidimensionnelles"],
+["BDM NoSQL","Développement d'un logiciel de conception d'une base de données multidimensionnelles"],
 ["Carsat","Questionnaire client sur page web et traitement des données"],
 ["E-ICGD","Environnement d'intégration continue de génération de documentation"],
 ["GESDEP","Finalisation et déploiement de l'application de gestion des déplacements des personnels"],
