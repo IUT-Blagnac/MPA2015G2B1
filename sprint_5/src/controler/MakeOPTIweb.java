@@ -98,7 +98,7 @@ public class MakeOPTIweb {
 		}
 		
 		try {
-			BufferedWriter fichier = new BufferedWriter(new FileWriter("test/intervenants2014_2015.json", false));
+			BufferedWriter fichier = new BufferedWriter(new FileWriter("OPTIweb/test/intervenants2014_2015.json", false));
 			
 			fichier.write(intJSON);
 			
@@ -109,7 +109,7 @@ public class MakeOPTIweb {
 		}
 		
 		try {
-			BufferedWriter fichier = new BufferedWriter(new FileWriter("test/etudiants2014_2015.json", false));
+			BufferedWriter fichier = new BufferedWriter(new FileWriter("OPTIweb/test/etudiants2014_2015.json", false));
 
 			fichier.write(etuJSON);
 			
@@ -127,7 +127,7 @@ public class MakeOPTIweb {
 	 * @version sprint4
 	 */
 	public static void main(String[] args) {
-		new MakeOPTIweb("test/OPTIweb.html");
+		new MakeOPTIweb("OPTIweb/test/OPTIweb.html");
 	}
 	
 	/**
