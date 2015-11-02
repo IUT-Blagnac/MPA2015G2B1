@@ -110,7 +110,7 @@ image:../test/captures/searchFieldProjetWeb400x600.png[]
 
 . L'ensemble des projets contenant la chaine saisie est alors fourni
 +
-NOTE: Le Bouton image:captures/backButton400x600.png[] permet de revenir à la Page d'Accueil de  l'application OPTIweb
+NOTE: Le Bouton image:../test/captures/backButton400x600.png[] permet de revenir à la Page d'Accueil de  l'application OPTIweb
 +
 image:../test/captures/searchProjetsWeb400x600.png[]
 
@@ -130,7 +130,7 @@ image:../test/captures/lineSujetArchitekt400x600.png[]
 
 . L'ensemble des projets réalisant le sujet sélectionné est alors fourni
 +
-NOTE: Le Bouton image:captures/backButton400x600.png[] permet de revenir à la Page Sujets de  l'application OPTIweb
+NOTE: Le Bouton image:../test/captures/backButton400x600.png[] permet de revenir à la Page Sujets de  l'application OPTIweb
 +
 image:../test/captures/clickSujetArchitekt400x600.png[]
 
@@ -167,7 +167,7 @@ image:../test/captures/ligneEtudiantPiboubes400x600.png[]
 +
 image:../test/captures/clickEtudiantPiboubes400x600.png[]
 
-NOTE: Le Bouton image:captures/backButton400x600.png[] permet de revenir à la Page Etudiants de  l'application OPTIweb
+NOTE: Le Bouton image:../test/captures/backButton400x600.png[] permet de revenir à la Page Etudiants de  l'application OPTIweb
 
 === OPTIweb : Rechercher un étudiant
 
@@ -200,7 +200,7 @@ Pour rechercher un groupe particulier :
 image:../test/captures/searchEtudiantGroupeB400x600.png[]
 
 
-NOTE: Le Bouton image:captures/backButton400x600.png[] permet de revenir à la Page d'Accueil de  l'application OPTIweb
+NOTE: Le Bouton image:../test/captures/backButton400x600.png[] permet de revenir à la Page d'Accueil de  l'application OPTIweb
 
 
 == OPTIweb : Page Intervenants
@@ -216,7 +216,7 @@ de l'année en indiquant leur nom, leur prénom et le nombre de fois où ils son
 +
 image:../test/captures/clickIntervenantRoques400x600.png[]
 
-NOTE: Le Bouton image:captures/backButton400x600.png[] permet de revenir à la Page Intervenants de  l'application OPTIweb
+NOTE: Le Bouton image:../test/captures/backButton400x600.png[] permet de revenir à la Page Intervenants de  l'application OPTIweb
 
 === OPTIweb : Rechercher un Intervenant
 
@@ -238,6 +238,6 @@ image:../test/captures/searchIntervenantsBRUEL400x600.png[]
 image:../test/captures/searchEtudiantFieldEmpty400x600.png[]
 ====
 
-NOTE: Le Bouton image:captures/backButton400x600.png[] permet de revenir à la Page d'Accueil de  l'application OPTIweb
+NOTE: Le Bouton image:../test/captures/backButton400x600.png[] permet de revenir à la Page d'Accueil de  l'application OPTIweb
 
 
