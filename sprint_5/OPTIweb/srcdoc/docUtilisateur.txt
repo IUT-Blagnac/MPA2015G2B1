@@ -88,10 +88,10 @@ La Page d'Accueil permet d'accéder :
 . aux 'Etudiants' du DUT INFO S3 de l'année
 . aux 'Intervenants' de l'année
 +
-NOTE: Le Bouton image:captures/creditsButton400x600.png[] permet d'obtenir des informations
+NOTE: Le Bouton image:../test/captures/creditsButton400x600.png[] permet d'obtenir des informations
 sur l'application OPTIweb
 
-image:captures/accueil400x600.png[]
+image:../test/captures/accueil400x600.png[]
 
 
 
@@ -106,13 +106,13 @@ Pour rechercher un projet particulier :
 
 . Saisir une chaine dans le champ de recherche
 +
-image:captures/searchFieldProjetWeb400x600.png[]
+image:../test/captures/searchFieldProjetWeb400x600.png[]
 
 . L'ensemble des projets contenant la chaine saisie est alors fourni
 +
 NOTE: Le Bouton image:captures/backButton400x600.png[] permet de revenir à la Page d'Accueil de  l'application OPTIweb
 +
-image:captures/searchProjetsWeb400x600.png[]
+image:../test/captures/searchProjetsWeb400x600.png[]
 
 
 
@@ -126,13 +126,13 @@ de l'année en indiquant leur nom, leur titre et le ou les groupe(s) d'étudiant
 
 . Dans la liste des sujets, Cliquer sur la ligne correspondant au sujet choisi
 +
-image:captures/lineSujetArchitekt400x600.png[]
+image:../test/captures/lineSujetArchitekt400x600.png[]
 
 . L'ensemble des projets réalisant le sujet sélectionné est alors fourni
 +
 NOTE: Le Bouton image:captures/backButton400x600.png[] permet de revenir à la Page Sujets de  l'application OPTIweb
 +
-image:captures/clickSujetArchitekt400x600.png[]
+image:../test/captures/clickSujetArchitekt400x600.png[]
 
 
 === OPTIweb : Rechercher un sujet
@@ -141,14 +141,14 @@ Pour rechercher un sujet particulier :
 
 . Saisir une chaine dans le champ de recherche
 +
-image:captures/searchFieldSujetLogiciel400x600.png[]
+image:../test/captures/searchFieldSujetLogiciel400x600.png[]
 
 . L'ensemble des sujets contenant la chaine saisie est alors fourni
 +
-image:captures/searchSujetLogiciel400x600.png[]
+image:../test/captures/searchSujetLogiciel400x600.png[]
 
 
-NOTE: Le Bouton image:captures/backButton400x600.png[] permet de revenir à la Page d'Accueil de  l'application OPTIweb
+NOTE: Le Bouton image:../test/captures/backButton400x600.png[] permet de revenir à la Page d'Accueil de  l'application OPTIweb
 
 
 == OPTIweb : Page Etudiants
@@ -161,11 +161,11 @@ de l'année en indiquant leur nom, leur prénom et leur groupe.
 
 . Dans la liste des étudiants, Cliquer sur la ligne correspondant à l'étudiant choisi
 +
-image:captures/ligneEtudiantPiboubes400x600.png[]
+image:../test/captures/ligneEtudiantPiboubes400x600.png[]
 
 . Le projet réalisé par l'étudiant sélectionné est alors fourni
 +
-image:captures/clickEtudiantPiboubes400x600.png[]
+image:../test/captures/clickEtudiantPiboubes400x600.png[]
 
 NOTE: Le Bouton image:captures/backButton400x600.png[] permet de revenir à la Page Etudiants de  l'application OPTIweb
 
@@ -175,19 +175,19 @@ Pour rechercher un étudiant particulier :
 
 . Saisir une chaine dans le champ de recherche
 +
-image:captures/searchFieldEtudiantLopez400x600.png[]
+image:../test/captures/searchFieldEtudiantLopez400x600.png[]
 
 [NOTE]
 .Pour Effacer la sélection
 ====
 - Cliquer sur la X du champ de recherche
 +
-image:captures/searchEtudiantFieldEmpty400x600.png[]
+image:../test/captures/searchEtudiantFieldEmpty400x600.png[]
 ====
 
 . L'ensemble des étudiants contenant la chaine saisie est alors fourni
 +
-image:captures/searchEtudiantLopez400x600.png[]
+image:../test/captures/searchEtudiantLopez400x600.png[]
 
 === OPTIweb : Rechercher un groupe
 
@@ -197,7 +197,7 @@ Pour rechercher un groupe particulier :
 
 . L'ensemble des étudiants du groupe saisi est alors fourni
 +
-image:captures/searchEtudiantGroupeB400x600.png[]
+image:../test/captures/searchEtudiantGroupeB400x600.png[]
 
 
 NOTE: Le Bouton image:captures/backButton400x600.png[] permet de revenir à la Page d'Accueil de  l'application OPTIweb
@@ -214,7 +214,7 @@ de l'année en indiquant leur nom, leur prénom et le nombre de fois où ils son
 
 . La liste des projets où l'intervenant sélectionné participe est alors fournie
 +
-image:captures/clickIntervenantRoques400x600.png[]
+image:../test/captures/clickIntervenantRoques400x600.png[]
 
 NOTE: Le Bouton image:captures/backButton400x600.png[] permet de revenir à la Page Intervenants de  l'application OPTIweb
 
@@ -224,18 +224,18 @@ Pour rechercher un intervenant particulier :
 
 . Saisir une chaine dans le champ de recherche
 +
-image:captures/searchFieldIntervenantsBRUEL400x600.png[]
+image:../test/captures/searchFieldIntervenantsBRUEL400x600.png[]
 
 . L'ensemble des intervenants contenant la chaine saisie est alors fourni
 +
-image:captures/searchIntervenantsBRUEL400x600.png[]
+image:../test/captures/searchIntervenantsBRUEL400x600.png[]
 
 [NOTE]
 .Pour Effacer la sélection
 ====
 - Cliquer sur la X du champ de recherche
 +
-image:captures/searchEtudiantFieldEmpty400x600.png[]
+image:../test/captures/searchEtudiantFieldEmpty400x600.png[]
 ====
 
 NOTE: Le Bouton image:captures/backButton400x600.png[] permet de revenir à la Page d'Accueil de  l'application OPTIweb
