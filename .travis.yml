@@ -22,9 +22,13 @@ script:
   - cd bin
   - java -cp .:../../junit.jar:./controler controler.MakeOPTIweb
   - java -cp .:../../junit.jar:./controler model.MakeOPTIwebTest
-  - java -cp .:../../junit.jar:./controler model.MakeOPTIwebTest
-  - java -cp .:../../junit.jar:./controler model.MakeOPTIwebTest
-  - java -cp .:../../junit.jar:./controler model.MakeOPTIwebTest
+  - java -cp .:../../junit.jar:./controler model.TestCSVLibrairie
+  - java -cp .:../../junit.jar:./controler model.TestEncadrer
+  - java -cp .:../../junit.jar:./controler model.TestEtudiants
+  - java -cp .:../../junit.jar:./controler model.TestGroupe
+  - java -cp .:../../junit.jar:./controler model.TestIntervenants
+  - java -cp .:../../junit.jar:./controler model.TestProjets
+  - java -cp .:../../junit.jar:./controler model.TestSujets
   - cd ../OPTIweb/test
   - cp OPTIweb.html /tmp/OPTIweb.html
   - casperjs test casperAccueil.js
