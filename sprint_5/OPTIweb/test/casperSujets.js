@@ -168,6 +168,7 @@ casper.thenClick({
         this.fill('#sujets div form', {
             'sujet': 'logiciel'
         }, false);  // do not submit
+        this.waitTimeout(2000);
         this.waitWhileVisible({
                     type: 'xpath',
                     path: '//ol[@id="listesujets"]/li['+17+']'
@@ -181,12 +182,12 @@ casper.thenClick({
                 if (SUJETS[indice][0].match(/logiciel/) || SUJETS[indice][1].match(/logiciel/)) {
                     this.test.assertVisible({
                         type: 'xpath',
-                        path: '//ol[@id="listesujets"]/li['+(indice+1)+']'
+                        path: '//ol[@id="listesujets"]/li['+(indice+2)+']'
                     },"Sujet "+SUJETS[indice][0]+" ******* visible");
                 } else {
                     this.test.assertNotVisible({
                         type: 'xpath',
-                        path: '//ol[@id="listesujets"]/li['+(indice+1)+']'
+                        path: '//ol[@id="listesujets"]/li['+(indice+2)+']'
                     },"Sujet "+SUJETS[indice][0]+" non visible");
                 }
             }
