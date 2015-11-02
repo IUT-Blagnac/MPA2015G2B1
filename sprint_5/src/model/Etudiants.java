@@ -3,7 +3,6 @@ package model;
 import java.io.File;
 import java.util.ArrayList;
 
-
 /**
  * Classe Etudiant qui contiendra le contenu du fichier de format étudiant (groupe, id, prenom, nom)
  * @author gkueny
@@ -16,6 +15,8 @@ public class Etudiants {
 	
 	static File csvpath = new File("data/etudiants2014_2015.csv");
 	
+	private Encadrer encadrer;
+	
 	int nbEtu;
 	
 	/**
@@ -24,11 +25,13 @@ public class Etudiants {
 	 * @since sprint_1bis
 	 *@version sprint_2
 	 */
-	public Etudiants(){
+	public Etudiants(Encadrer encadrer){
 		
 		this.allEtudiant = CSVLibrairie.readCSV(Etudiants.csvpath, ";");
 		
 		this.nbEtu = allEtudiant.size();
+		
+		this.encadrer = encadrer;
 		
 	}
 
@@ -112,11 +115,24 @@ public class Etudiants {
 		ArrayList<String[]> etuByGroupe = new ArrayList<String[]>();
 		
 		for (int i=1; i < allEtudiant.size();i++) {
-			if (groupe.equals(allEtudiant.get(i)[0])){
+			if (groupe.trim().equals(allEtudiant.get(i)[0].trim())){
 				etuByGroupe.add(allEtudiant.get(i));
 			}
 		}
 		return etuByGroupe;
+	}
+	
+	public String[] getEtuByNameAndFirstName (String prenom, String nom) {
+		
+		
+		for (int i=1; i < allEtudiant.size();i++) {
+			System.out.println(prenom.trim() + "->"+ allEtudiant.get(i)[3].trim() + " et " + nom.trim() + "->"+ allEtudiant.get(i)[2].trim());
+			if (prenom.trim().equals(allEtudiant.get(i)[3].trim()) && nom.trim().equals(allEtudiant.get(i)[2].trim())){
+				System.out.println("hey");
+				return allEtudiant.get(i);
+			}
+		}
+		return null;
 	}
 	/**
 	 * getNbEtu()
@@ -148,7 +164,6 @@ public class Etudiants {
 			String groupe = etudiantCourant[0];
 			
 			String[] projetCourant;
-			String[] intervenantCourant;
 			
 			String idProjet = " ";
 			String sujet = " ";
@@ -179,56 +194,58 @@ public class Etudiants {
 					}
 					
 				}
-				if(projetCourant.length > 3){ // récupération client
-					
-					client = projetCourant[3]; 
-					
-					try{
-						intervenantCourant = intervenants.getIntervenants(client);// récupéraction client
-					}catch(java.lang.NumberFormatException e){
-						intervenantCourant = null;
-					}
-					
-					if(intervenantCourant != null){ // si on trouve
-						client = intervenantCourant[1] + " " +intervenantCourant[2]; //prenom + nom de l'intervenant
-					}
-					
-				}
+				//////////////////////Récuperation intervenants////////////////////
 				
-				if(projetCourant.length > 4){
-					
-					superviseur = projetCourant[4];
-					
-					try{
-						intervenantCourant = intervenants.getIntervenants(superviseur);// récupéraction superviseur
-					}catch(java.lang.NumberFormatException e){
-						intervenantCourant = null;
-					}
-					
-					if(intervenantCourant != null){
-						superviseur =  intervenantCourant[1] + intervenantCourant[2]; //prenom + nom de l'intervenant
-					}
-				}
-				
-				if(projetCourant.length > 5){
-					
-					support_technique = projetCourant[5];
-					
-					try{
-						intervenantCourant = intervenants.getIntervenants(support_technique);// récupéraction support_technique
-					}catch(java.lang.NumberFormatException e){
-						intervenantCourant = null;
-					}
-					
-					if(intervenantCourant != null){
-						support_technique = "<html>" + intervenantCourant[1] + " \n </html> <html>" +intervenantCourant[2] + "</html>"; //prenom + nom de l'intervenant
-					}
-					
-				}
-				
-			}
-
+				ArrayList <String[]> allEncadrer = new ArrayList <String[]> ();
 			
+				String idIntervenant = "";
+				String[] intervenantOfprojet;
+				
+				allEncadrer = encadrer.getAllEncadrerForIdProjet(projetCourant[0]);
+				
+				client = " ";
+				superviseur = " ";
+				support_technique = " ";
+				
+				for(int b = 0; b < allEncadrer.size(); b++){//client
+					
+				
+					if(allEncadrer.get(b)[2].trim().equals("1")){
+						
+						idIntervenant = allEncadrer.get(b)[1].trim();
+						
+						intervenantOfprojet = intervenants.getIntervenants(idIntervenant);
+						
+						if(intervenantOfprojet != null){
+							client = intervenantOfprojet[1] + " " + intervenantOfprojet[2];
+						}
+	
+					}else if(allEncadrer.get(b)[2].trim().equals("2")){//superviseur
+						
+						idIntervenant = allEncadrer.get(b)[1].trim();
+						
+						intervenantOfprojet = intervenants.getIntervenants(idIntervenant);
+						
+						if(intervenantOfprojet != null){
+							superviseur = intervenantOfprojet[1] + " " + intervenantOfprojet[2];
+						}
+	
+					}else if(allEncadrer.get(b)[2].trim().equals("3")){//support_tech
+						
+						idIntervenant = allEncadrer.get(b)[1].trim();
+						
+						intervenantOfprojet = intervenants.getIntervenants(idIntervenant);
+						
+						if(intervenantOfprojet != null){
+							support_technique = intervenantOfprojet[1] + " " + intervenantOfprojet[2];
+						}
+	
+					}
+					
+				}//fin du for
+
+				
+			}//fin if
 			String[] etudiantAffichage = {etudiantCourant[0],etudiantCourant[1], etudiantCourant[2], etudiantCourant[3],  idProjet, sujet, client, superviseur, support_technique}; 
 			
 			allEtudiantAffichage.add(etudiantAffichage);

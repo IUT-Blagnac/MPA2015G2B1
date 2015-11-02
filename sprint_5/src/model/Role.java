@@ -1,6 +1,5 @@
 package model;
 
-
 public enum Role {
 	
 	Client("CLient"),

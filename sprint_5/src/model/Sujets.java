@@ -1,6 +1,5 @@
 package model;
 
-
 import java.io.File;
 import java.util.ArrayList;
  
@@ -61,23 +60,6 @@ public class Sujets {
 		return null;
 	}
 	
-	public String getGroupe(String id){
-		
-		Projets projets = new Projets(new Etudiants(), new Encadrer());
-		
-		ArrayList<String[]> allProjet = new ArrayList<String[]>();
-		
-		allProjet = projets.getAllProjets();
-		
-		for(int i = 0; i < allProjet.size(); i++){
-			if(allProjet.get(i)[2].trim().equals(id.trim())){
-				return allProjet.get(i)[1];
-			}
-		}
-		
-		return "";
-	}
-	
 	/**
 	 * getSujetByNom (id)
 	 * 
@@ -93,7 +75,7 @@ public class Sujets {
 	
 		
 		for (int i=1; i < allSubject.size();i++) {
-			if (nom.equals(allSubject.get(i)[1])){
+			if (nom.trim().equals(allSubject.get(i)[1].trim())){
 				return allSubject.get(i);
 			}
 		}
@@ -106,6 +88,24 @@ public class Sujets {
 	 */
 	public int getNbSujets() {
 		return nbSubject;
+	}
+	
+	/**
+	 * retourne la position du sujet dont le nom est spécifié
+	 * @param nom du sujet
+	 * @return position du sujet
+	 * @return sinon 0
+	 */
+	public int getPosition(String nom){
+		
+		int position = 0;
+		
+		for (position = 0; position < nbSubject;position++ ){
+			if (nom.trim().equals(allSubject.get(position)[1].trim())){
+				return position;
+			}
+		}
+		return 0;
 	}
 
 	

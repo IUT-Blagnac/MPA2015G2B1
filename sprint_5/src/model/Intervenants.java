@@ -3,13 +3,13 @@ package model;
 import java.io.File;
 import java.util.ArrayList;
 
-
 public class Intervenants {
 	
 	private ArrayList <String[]> allIntervenants = new ArrayList <String[]> ();
 	static File csvpath = new File("data/intervenants2014_2015.csv");
 	private int nbIntervenants;
 	private Projets projets;
+	private Encadrer encadrer;
 	
 	/**
 	 * Intervenants()
@@ -20,13 +20,16 @@ public class Intervenants {
 	 * @since sprint_1bis
 	 * @version sprint_2
 	 */
-	public Intervenants(Projets projets){
+	public Intervenants(Projets projets, Encadrer encadrer){
 		
 		allIntervenants = CSVLibrairie.readCSV(csvpath, ";");
 		
 		nbIntervenants = allIntervenants.size();
 		
 		this.projets = projets;
+		
+		this.encadrer = encadrer;
+		
 	}
 	
 /////////////////////////////////////////////////GET//////////////////////////////////////////////////////
@@ -57,44 +60,6 @@ public class Intervenants {
 		}
 		
 		return null;//si on a pas trouvé l'intervenant : on renvoie null
-	}
-	
-	public String getNbClient(String idIntervenant){
-		
-		Encadrer encadrer = new Encadrer();
-		
-		ArrayList<String[]> allEncadrer = encadrer.getAllEncadrer();
-		
-		int nbClient = 0;
-		
-		for(int i = 0; i < allEncadrer.size(); i++){
-			if(allEncadrer.get(i)[1].trim().equals(idIntervenant.trim()) && allEncadrer.get(i)[2].trim().equals("1")){
-				nbClient++;
-			}
-		}
-		
-		String nbClientString = String.valueOf(nbClient);
-		
-		return nbClientString;
-	}
-	
-	public String getNbSuperviseur(String idIntervenant){
-		
-		Encadrer encadrer = new Encadrer();
-		
-		ArrayList<String[]> allEncadrer = encadrer.getAllEncadrer();
-		
-		int nbSuperviseur = 0;
-		
-		for(int i = 0; i < allEncadrer.size(); i++){
-			if(allEncadrer.get(i)[1].trim().equals(idIntervenant.trim()) && allEncadrer.get(i)[2].trim().equals("2")){
-				nbSuperviseur++;
-			}
-		}
-		
-		String nbSuperviseurString = String.valueOf(nbSuperviseur);
-		
-		return nbSuperviseurString;
 	}
 	
 	/**
@@ -163,87 +128,85 @@ public class Intervenants {
 	 */
 	public ArrayList<String[]> getAffichage(Projets projets, Sujets sujets){
 		
-		ArrayList <String[]> allIntervenantsAffichage = new ArrayList <String[]> ();
-		String intervenantCourant[];
-		String id;
-		ArrayList <String[]> projetRetour;
-		String sujetID = " ";
-		String sujet[] ;
-		String role = " ";
+		ArrayList<String[]> retourAffichage = new ArrayList<String[]>();
 		
-		for(int i = 0; i < nbIntervenants; i++){ // boucle principal parcourant chaque lignes
+		for(int i = 0; i < nbIntervenants; i++){ // pour chaque intervenant
 			
-			intervenantCourant = allIntervenants.get(i);
-				
-			id = intervenantCourant[0]; // on récupere l'id de l'intervenant
+			ArrayList<String[]> encadrerCourant = new ArrayList<String[]>();
 			
-			projetRetour = projets.getProjectByIntervenant(id);
+			String[] intervenantCourant = allIntervenants.get(i);
 			
-			String[] intervenantRetourNoProjet = new String[6];
-	
-		
 			
-			if(projetRetour.size() != 0){// on a trouvé le projet à l'intervenant
-				
-	
-				for(int j = 0; j < projetRetour.size(); j++){
+			encadrerCourant = encadrer.getAllEncadrerForIdIntervenant(intervenantCourant[0]);
+			
+			if(encadrerCourant.size() != 0){
+				for(int j = 0; j < encadrerCourant.size(); j++){ // pour chaque projet auquel l'intervenant courant est affilié
 					
-					String[] intervenantRetour = new String[6];
+					String[] retourCourant = new String[6]; // idIntervenant - prenomIntervenant - nomIntervenant - idProjet - nomSujet - Rôle
+					
+					String[] encadrerCourant2 = encadrerCourant.get(j);
 					String[] projetCourant;
+					String[] sujetCourant;
 					
-					projetCourant = projetRetour.get(j);
-					
-					
-					if(projetCourant[3].equals(id)){
-						role = "Client";
-					}else if(projetCourant[4].equals(id)){
-						role = "Superviseur";
-					}
-					if(projetCourant[5].equals(id)){
-						role = "Support_technique";
-					}
-					
-					sujetID = projetCourant[2];
-					
-					sujet = sujets.getSujet(Integer.parseInt(sujetID));
-					
-					if(j == 0){
-						intervenantRetour[0] = id;
-						intervenantRetour[1] = intervenantCourant[1];
-						intervenantRetour[2] = intervenantCourant[2];
-					}else {
-						intervenantRetour[0] = " ";
-						intervenantRetour[1] = " " ;
-						intervenantRetour[2] = " ";
+					try{
+						projetCourant = projets.getProject(Integer.parseInt(encadrerCourant2[0].trim()));// on récupere le projet
+						System.out.println("id : " + encadrerCourant2[0].trim());
+						sujetCourant = sujets.getSujet(Integer.parseInt(projetCourant[2].trim()));
+						
+						retourCourant[3] = encadrerCourant2[0]; // idProjet
+						
+						retourCourant[4] = sujetCourant[1];// nomSujet
+	
+						if(encadrerCourant2[2].trim().equals("1")){// Rôle
+							retourCourant[5] = "Client";
+						}else if(encadrerCourant2[2].trim().equals("2")){// Rôle
+							retourCourant[5] = "Superviseur";
+						}else if(encadrerCourant2[2].trim().equals("3")){// Rôle
+							retourCourant[5] = "Support_Technique";
+						}
+						
+						if(j == 0){// 1ere ligne
+							retourCourant[0] = intervenantCourant[0];// idIntervenant
+							retourCourant[1] = intervenantCourant[1];// prenomIntervenant
+							retourCourant[2] = intervenantCourant[2];// nomIntervenant
+							
+	
+						}else { // les autres lignes
+							retourCourant[0] = " ";// idIntervenant
+							retourCourant[1] = " ";// prenomIntervenant
+							retourCourant[2] = " ";// nomIntervenant
+						}
+						retourAffichage.add(retourCourant);
+						
+					}catch(java.lang.NumberFormatException e){
+						retourCourant[0] = intervenantCourant[0];// idIntervenant
+						retourCourant[1] = intervenantCourant[1];// prenomIntervenant
+						retourCourant[2] = intervenantCourant[2];// nomIntervenant
+						retourCourant[3] = " "; // idProjet						
+						retourCourant[4] = " ";// nomSujet
+						retourCourant[5] = " ";// fonction
+						
+						retourAffichage.add(retourCourant);
 						
 					}
-					
-					intervenantRetour[3] = projetCourant[0];
-					intervenantRetour[4] = sujet[1];
-					intervenantRetour[5] = role;
-					
-					//System.out.println("projet : " + intervenantRetour[0] + " - " + intervenantRetour[1]+ " - " + intervenantRetour[2] + " - " + intervenantRetour[3] + " - " + intervenantRetour[4] + " - " +intervenantRetour[5]);
-
-					
-					allIntervenantsAffichage.add(intervenantRetour);
 				}
-				
 			}else {
-				intervenantRetourNoProjet[0] = id;
-				intervenantRetourNoProjet[1] = intervenantCourant[1];
-				intervenantRetourNoProjet[2] = intervenantCourant[2];
+				String[] retourCourant = new String[6]; // idIntervenant - prenomIntervenant - nomIntervenant - idProjet - nomSujet - Rôle
+				retourCourant[0] = intervenantCourant[0];// idIntervenant
+				retourCourant[1] = intervenantCourant[1];// prenomIntervenant
+				retourCourant[2] = intervenantCourant[2];// nomIntervenant
+				retourCourant[3] = " ";// nomIntervenant
+				retourCourant[4] = " ";// nomIntervenant
+				retourCourant[5] = " ";// nomIntervenant
 				
-				intervenantRetourNoProjet[3] = " ";
-				intervenantRetourNoProjet[4] = " ";
-				intervenantRetourNoProjet[5] = " ";
+				retourAffichage.add(retourCourant);
 				
-				allIntervenantsAffichage.add(intervenantRetourNoProjet);
 			}
-					
 			
+	
 		}
-
-		return allIntervenantsAffichage;
+		
+		return retourAffichage;
 	}
 	
 	/**
@@ -337,58 +300,5 @@ public class Intervenants {
 		}
 		CSVLibrairie.saveCSV(csvpath, allIntervenants, ";");
 	}
-	
-	/**
-	 * findExpressionInName retourne tout les intervenant yant le nom contenant l'expression renseigné
-	 * @param Expression expression a trouver
-	 * @return les intervenants concernés
-	 */
-	public ArrayList<String[]> findExpressionInName (String Expression)
-	{
-		int i=0;
-		ArrayList<String[]> foundIntervenants = new ArrayList<String[]>();
-		while(i<nbIntervenants)
-		{
-			if (allIntervenants.get(i)[2].toLowerCase().contains(Expression.toLowerCase()))
-			{
-				foundIntervenants.add(allIntervenants.get(i));
-			}
-			i++;
-		}
-		if (foundIntervenants.size()>0)
-		{
-			return foundIntervenants;
-		}
-		else
-		{
-			return null;
-		}
-	}
-	
-	/**
-	 * findExpressionInFirstName retourne tout les intervenant yant le prénom contenant l'expression renseigné 
-	 * @param Expression à trouver
-	 * @return les intervenants concernés
-	 */
-	public ArrayList<String[]> findExpressionInFirstName (String Expression)
-	{
-		int i=0;
-		ArrayList<String[]> foundIntervenants = new ArrayList<String[]>();
-		while(i<nbIntervenants)
-		{
-			if (allIntervenants.get(i)[1].toLowerCase().contains(Expression.toLowerCase()))
-			{
-				foundIntervenants.add(allIntervenants.get(i));
-			}
-			i++;
-		}
-		if (foundIntervenants.size()>0)
-		{
-			return foundIntervenants;
-		}
-		else
-		{
-			return null;
-		}
-	}
+
 }
