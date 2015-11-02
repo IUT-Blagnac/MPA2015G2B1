@@ -1,11 +1,15 @@
 package controler;
 
 import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+
 
 import model.Encadrer;
 import model.Etudiants;
@@ -94,7 +98,7 @@ public class MakeOPTIweb {
 		}
 		
 		try {
-			BufferedWriter fichier = new BufferedWriter(new FileWriter("../OPTIweb/test/intervenants2014_2015.json", false));
+			BufferedWriter fichier = new BufferedWriter(new FileWriter("test/intervenants2014_2015.json", false));
 			
 			fichier.write(intJSON);
 			
@@ -105,7 +109,7 @@ public class MakeOPTIweb {
 		}
 		
 		try {
-			BufferedWriter fichier = new BufferedWriter(new FileWriter("../OPTIweb/test/etudiants2014_2015.json", false));
+			BufferedWriter fichier = new BufferedWriter(new FileWriter("test/etudiants2014_2015.json", false));
 
 			fichier.write(etuJSON);
 			
@@ -123,7 +127,7 @@ public class MakeOPTIweb {
 	 * @version sprint4
 	 */
 	public static void main(String[] args) {
-		new MakeOPTIweb("../OPTIweb/test/OPTIweb.html");
+		new MakeOPTIweb("test/OPTIweb.html");
 	}
 	
 	/**
@@ -133,8 +137,10 @@ public class MakeOPTIweb {
 	 */
 	private void HTMLEcrase(){
 		try {
-			BufferedWriter fichier = new BufferedWriter(new FileWriter(destination, false));
-			fichier.close();
+			FileOutputStream fileStream = new FileOutputStream(new File(destination));
+		    OutputStreamWriter fw = new OutputStreamWriter(fileStream, "UTF-8");
+		    fw.close();
+		    fileStream.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -182,7 +188,7 @@ public class MakeOPTIweb {
 		content += System.lineSeparator();
 		content += "$.mobile.pushStateEnabled = false;";
 		content += System.lineSeparator();
-		content += "};";
+		content += "});";
 		content += System.lineSeparator();
 		content += "</script>";
 		content += System.lineSeparator();

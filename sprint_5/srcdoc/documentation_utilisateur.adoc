@@ -1,4 +1,4 @@
-= Documentation technique sprint_5
+= Documentation utilisateur MakeOPTIweb
 
 :Author:  Pol-Hervé RAILLARD, Nicolas RIBEREAU, Kueny Gaëtan, Kozlowski Nigel
 
@@ -25,6 +25,7 @@ Version {revnumber}
 =====
 _OPTIweb.html_ est une application HTML de *consultation* des projets tutorés gérés par OPTI.
 _OPTIweb.html_ est compatible avec l’ensemble des navigateurs et supports du moment (PC, tablettes, smartphones).
+_OPTIweb.html_ sera correctement affiché avec une connection internet, sans cela l'affichage sera minimal.
 =====
 
 == Fiche projet - SPRINT 4

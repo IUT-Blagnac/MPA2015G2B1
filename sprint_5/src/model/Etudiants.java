@@ -3,6 +3,7 @@ package model;
 import java.io.File;
 import java.util.ArrayList;
 
+
 /**
  * Classe Etudiant qui contiendra le contenu du fichier de format étudiant (groupe, id, prenom, nom)
  * @author gkueny

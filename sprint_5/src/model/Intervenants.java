@@ -3,6 +3,7 @@ package model;
 import java.io.File;
 import java.util.ArrayList;
 
+
 public class Intervenants {
 	
 	private ArrayList <String[]> allIntervenants = new ArrayList <String[]> ();

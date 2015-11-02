@@ -1,4 +1,4 @@
-= Documentation technique sprint_5
+= Documentation technique MakeOPTIweb
 
 :Author:  Pol-Hervé RAILLARD, Nicolas RIBEREAU, Kueny Gaëtan, Kozlowski Nigel
 
@@ -25,6 +25,7 @@ Version {revnumber}
 =====
 _OPTIweb.html_ est une application HTML de *consultation* des projets tutorés gérés par OPTI.
 _OPTIweb.html_ est compatible avec l’ensemble des navigateurs et supports du moment (PC, tablettes, smartphones).
+_OPTIweb.html_ sera correctement affiché avec une connection internet, sans cela l'affichage sera minimal.
 =====
 
 == Fiche projet - SPRINT 4
@@ -55,11 +56,11 @@ image::univ_noir.png[]
 
 == Comment lancer l'application OPTIweb?
 
-Lancer, sur un ordinateur possedant l'OS Windows, le fichier "makeOptiWeb.bat". Le fichier MakeOPTIweb.html est alors automatiquement générée das la dossier test.
+Lancer, sur un ordinateur possedant l'OS Windows, le fichier "makeOptiWeb.bat". Le fichier MakeOPTIweb.html est alors automatiquement générée dans la dossier test.
 
 == Fonctionnalités disponibles - SPRINT 4
 
-Elle génère uniquement et simplement l'application OPTIweb à partir des fichier .csv présent dans le dossier data.
+L'application génère uniquement et simplement le fichier OPTIweb.html à partir des fichier .csv présent dans le dossier data.
 
 ==  Tests
 
@@ -94,6 +95,39 @@ Ces derniers sont éxecutés par testCasper.bat.
 |test_writeJSONEtu()|Teste le retour de la fonction writeJSONEtu() qui a pour rôle de générer le JSON etudiants2014_2015.json utiliser par les tests casper | OK
 |test_writeJSONInt()|Teste le retour de la fonction writeJSONInt() qui a pour rôle de générer le JSON intervenants2014_2015.json utiliser par les tests casper| OK
 |==================
+
+
+== Nom des classes utilisés
+
+=== MakeOptiweb
+    La class principal qui s'occupe de générer le fichier OPTIweb.html ainsi que les fichier json utile aux tests à partir des données des fichier csv.
+
+=== Encadrer
+    Encadrer représente le contenu du fichier encadrer.csv
+
+=== Etudiants
+    Etudiants représente le contenu du fichier etudiants2014_2015.csv
+    
+=== Groupe
+    Groupe représente le contenu du fichier groupe.csv
+    
+=== Intervenants
+    Intervenants représente le contenu du fichier intervenants2014_2015.csv
+ 
+=== Projets
+    Projets représente le contenu du fichier projets2014_2015.csv   
+    
+=== Role
+    Role représente le contenu du fichier role2014_2015.csv  
+    
+=== Sujets
+    Sujets représente le contenu du fichier sujets2014_2015.csv  
+    
+=== Voeux
+    Voeux représente le contenu du fichier voeux2014_2015.csv 
+    
+=== CSVLibrairie
+    CSVLibrairie permet d'écrire dans les fichier csv.
 
 
 == Informations

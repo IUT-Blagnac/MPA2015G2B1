@@ -4,6 +4,7 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import controler.MakeOPTIweb;
 
+
 /**
  * MakeOPTIwebTest est la classe testant la classe MakeOPTIweb
  * @author gkueny
@@ -37,7 +38,7 @@ public class MakeOPTIwebTest extends TestCase{
 							"$.mobile.changePage.defaults.changeHash = false;",
 							"$.mobile.hashListeningEnabled = false;",
 							"$.mobile.pushStateEnabled = false;",
-							"};",
+							"});",
 							"</script>",
 							"<script src=\"http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js\">",
 							"</script><style type='text/css'>",
