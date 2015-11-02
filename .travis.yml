@@ -25,6 +25,7 @@ script:
   - ls ./controler/
   - java -cp .:../../junit.jar:./controler controler.MakeOPTIweb
   - cd ../OPTIweb/test
+  
   - cp OPTIweb.html /tmp/OPTIweb.html
   - casperjs test casperAccueil.js
   - ./testCasper.bat
