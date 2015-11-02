@@ -230,7 +230,7 @@ public class TestIntervenants extends TestCase{
 		String[] retourLigne1 = {"1", "Remi", "BOULLE","12", "RegExp", "Superviseur"};
 		
 		totalAssertions++ ;
-		assertEquals("Vérification retour getAffichage : ", retourLigne1[0] + "" + retourLigne1[1] + "" + retourLigne1[2] + "" + retourLigne1[3] + "" + retourLigne1[4] + "" + retourLigne1[5] , intervenantsList.get(0)[0]+ "" + intervenantsList.get(0)[1]+ "" + intervenantsList.get(0)[2]+ "" + intervenantsList.get(0)[3]+ "" + intervenantsList.get(0)[4]+ "" + intervenantsList.get(0)[5]);
+		assertEquals("Vérification retour getAffichage : ", retourLigne1[0] + "" + retourLigne1[1] + "" + retourLigne1[2] + "" + retourLigne1[3] + "" + retourLigne1[4] + "" + retourLigne1[5] , intervenantsList.get(1)[0]+ "" + intervenantsList.get(1)[1]+ "" + intervenantsList.get(1)[2]+ "" + intervenantsList.get(1)[3]+ "" + intervenantsList.get(01[4]+ "" + intervenantsList.get(1)[5]);
 		bilanAssertions++ ;
 				
 	}
