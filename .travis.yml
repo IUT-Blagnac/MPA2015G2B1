@@ -35,6 +35,6 @@ script:
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/presentationFinale.html srcdoc/presentationFinale.txt
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_utilisateur_MakeOptiWeb.html srcdoc/documentation_utilisateur.adoc
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_technique_MakeOptiWeb.html srcdoc/documentation_technique.adoc
-  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_utilisateur_OptiWeb.html srcdoc/docUtilisateur.txt
-  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_technique_OptiWeb.html srcdoc/docTechnique.txt
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o OPTIweb/srcdoc/documentation_utilisateur_OptiWeb.html OPTIweb/srcdoc/docUtilisateur.txt
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o OPTIweb/srcdoc/documentation_technique_OptiWeb.html OPTIweb/srcdoc/docTechnique.txt
   - ls -alF srcdoc
