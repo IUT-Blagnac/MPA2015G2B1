@@ -4,9 +4,10 @@ set PLANTUMLDIR=.\tools\
 set SPRINTDIR=%~dp0
 set SRCDIR=./src/
 set BINDIR=./bin
-set SRCDOCDIR=.OPTIweb/srcdoc/
-set DOCDIR=.OPTIweb/srcdoc/
-set TESTDIR=.OPTIweb/test/
+set SRCDOCDIR=./OPTIweb/srcdoc/
+set DOCDIR=./OPTIweb/srcdoc/
+set TESTDIR=./OPTIweb/test/
+
 
 set MAKETEST=1
 
