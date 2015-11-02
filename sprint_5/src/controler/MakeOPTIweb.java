@@ -286,11 +286,11 @@ public class MakeOPTIweb {
 	 */
 	public static String writeHTMLProjet(){
 
-		Etudiants etudiants = new Etudiants();
 		Encadrer encadrer = new Encadrer();
+		Etudiants etudiants = new Etudiants(encadrer);
 		Sujets sujets = new Sujets();
 		Projets projets = new Projets(etudiants, encadrer);
-		Intervenants intervenants = new Intervenants(projets);
+		Intervenants intervenants = new Intervenants(projets, encadrer);
 		
 		String content = "";
 		
@@ -428,7 +428,8 @@ public class MakeOPTIweb {
 	 * @version sprint4
 	 */
 	public static String writeHTMLEtu(){
-		Etudiants etudiants = new Etudiants();
+		Encadrer encadrer = new Encadrer();
+		Etudiants etudiants = new Etudiants(encadrer);
 			
 		String content = "";
 		content += "<!-- DEBUT page etudiants -->";
@@ -490,7 +491,7 @@ public class MakeOPTIweb {
 	 * @version sprint4
 	 */
 	public static String writeHTMLInt(){
-		Intervenants intervenants = new Intervenants(new Projets(new Etudiants(), new Encadrer()));
+		Intervenants intervenants = new Intervenants(new Projets(new Etudiants(new Encadrer()), new Encadrer()));
 		
 		String content = "";
 		
@@ -593,7 +594,7 @@ public class MakeOPTIweb {
 	public static String writeJSONInt(){
 		
 			
-			Intervenants inter = new Intervenants(new Projets(new Etudiants(), new Encadrer()));
+			Intervenants inter = new Intervenants(new Projets(new Etudiants(new Encadrer()), new Encadrer()));
 			ArrayList<String[]> allInt = new ArrayList<String[]>();
 			
 			String content = "";
@@ -630,7 +631,7 @@ public class MakeOPTIweb {
 	public static String writeJSONEtu(){
 
 
-			Etudiants etudiants = new Etudiants();
+			Etudiants etudiants = new Etudiants(new Encadrer());
 
 			ArrayList<String[]> allEtu = new ArrayList<String[]>();
 
