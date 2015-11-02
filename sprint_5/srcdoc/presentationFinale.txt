@@ -6,15 +6,26 @@
 :duration: 30
 :incremental: 1
 
-== Premier transparent
+== Bilan fonctionnel du projet
 
-A vous ...
+Les principales fonctionnalités du projet OPTI marchent mais à cause du manque de temps, nous n'avons pu installer la fonctionnalités suivantes :
 
--  item 1
--  item 2
--  item 3
+** Afficher la liste d'étudiant, d'intervenant, de sujets, de projets d'un fichier cvs puis en supprimer certains et les enregistrer dans un nouveau fichier cvs
+** Afficher la liste des étudiants ou des intervenants ou des sujets ou des projets , filtrer les éléments affichés sur chacun des champs du fichier .csv correspondant
+** Afficher la liste d'étudiant, d'intervenant, de sujets, de projets d'un fichier cvs puis en ajouter certains et les enregistrer dans un nouveau fichier cvs
+** Lister pour un groupe le nombre de "concurrents" par rang de voeux.
+** Lister le nombre de voeux par rang pour un sujet
+** Lister les groupes affectés / non affectés
+** Lister les projets par intervenant
+** Sélectionner un numéro de voeux X et afficher tous les sujets sélectionnés en voeux numéro X
+** Lister les intervenants par projet
+** Lister les sujets affectés / non affectés
+** Afficher la liste des projets puis cloner n’importe quel projet, l'éditer et sauvegarder la liste des projets dans un fichier .csv
+** Pour tous les sujets, voir combien de groupes l’ont choisi en voeux 1, combien de groupes l’ont choisi en voeux 2, …, combien de groupe l’ont choisi en voeux nombreDeSujets mais sans compter les groupes ayant déjà un projet (sujet affecté)
+** Pré-affecter les groupes aux sujets en minimisant le rang du voeu choisi pour chaque groupe
 
-NOTE: On compte en moyenne 3mn par transparent
+
+Cependant la mojorités des focntionnalités sont présente et completement fonctionnelles.
 
 == Second transparent
 

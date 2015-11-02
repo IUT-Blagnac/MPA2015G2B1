@@ -181,12 +181,12 @@ casper.thenClick({
                 if (SUJETS[indice][0].match(/logiciel/) || SUJETS[indice][1].match(/logiciel/)) {
                     this.test.assertVisible({
                         type: 'xpath',
-                        path: '//ol[@id="listesujets"]/li['+(indice+2)+']'
+                        path: '//ol[@id="listesujets"]/li['+(indice+1)+']'
                     },"Sujet "+SUJETS[indice][0]+" ******* visible");
                 } else {
                     this.test.assertNotVisible({
                         type: 'xpath',
-                        path: '//ol[@id="listesujets"]/li['+(indice+2)+']'
+                        path: '//ol[@id="listesujets"]/li['+(indice+1)+']'
                     },"Sujet "+SUJETS[indice][0]+" non visible");
                 }
             }

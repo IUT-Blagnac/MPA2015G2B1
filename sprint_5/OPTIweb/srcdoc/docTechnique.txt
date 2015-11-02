@@ -19,7 +19,7 @@ Membres de l'équipe enseignante:: Jean-Michel BRUEL, Jean-Michel INGLEBERT, And
 
 *Université Toulouse 2 - IUT de Blagnac*
 
-Formation:: DUT INFO S3/Module MPA
+Formation:: DUT INFO S3/Module MPAas
 Projet:: OPTI/OPTIweb
 ====
 
