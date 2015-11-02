@@ -491,7 +491,7 @@ public class MakeOPTIweb {
 	 * @version sprint4
 	 */
 	public static String writeHTMLInt(){
-		Intervenants intervenants = new Intervenants(new Projets(new Etudiants(new Encadrer()), new Encadrer()));
+		Intervenants intervenants = new Intervenants(new Projets(new Etudiants(new Encadrer())), new Encadrer()));
 		
 		String content = "";
 		

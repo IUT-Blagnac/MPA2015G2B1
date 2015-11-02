@@ -29,6 +29,22 @@ public class Sujets {
 	
 	
 //////////////////////////////////////GET//////////////////////////////////////
+	public String getGroupe(String id){
+		
+		Projets projets = new Projets(new Etudiants(), new Encadrer());
+		
+		ArrayList<String[]> allProjet = new ArrayList<String[]>();
+		
+		allProjet = projets.getAllProjets();
+		
+		for(int i = 0; i < allProjet.size(); i++){
+			if(allProjet.get(i)[2].trim().equals(id.trim())){
+				return allProjet.get(i)[1];
+			}
+		}
+		
+		return "";
+	}
 	/**
 	 * getAllSujets()
 	 * @return ArrayList de tout les sujets

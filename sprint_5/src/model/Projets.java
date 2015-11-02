@@ -592,6 +592,138 @@ public class Projets {
 		
 		return projetRetour;
 	}
+
+	public ArrayList<String[]> getAffichageForHTML(Etudiants etudiants,Intervenants intervenants, Sujets sujets){
+		
+		ArrayList <String[]> allProjetsAffichage = new ArrayList <String[]> ();
+		String projetCourant[];
+		String etudiantCourant[];
+	
+		String id;
+		
+		ArrayList <String[]> etudiantRetour;
+		
+		String[] sujetRetour;
+		
+		for(int i = 1; i < nbProjects; i++){ // boucle principal parcourant chaque lignes
+			
+			String[] projetRetour = new String[7];
+			
+			projetCourant = allProjet.get(i);
+			
+			projetRetour[0] = projetCourant[0];
+			projetRetour[1] = projetCourant[1];
+			
+			//////////////////////Récuperation sujet////////////////////
+			id = projetCourant[2]; // on récupere l'id du sujet
+			
+			try{
+				sujetRetour = sujets.getSujet(Integer.parseInt(id.trim()));
+				
+				if(sujetRetour != null){// on a trouvé le sujet lié au projet
+					
+					projetRetour[2] = 	sujetRetour[1] + ";"+ sujetRetour[2] ;
+					
+				}else {
+					projetRetour[2] = " ";
+				}
+					
+				//////////////////////Récuperation intervenants////////////////////
+			
+				ArrayList <String[]> allEncadrer = new ArrayList <String[]> ();
+			
+				String idIntervenant = "";
+				String[] intervenantOfprojet;
+				
+				allEncadrer = encadrer.getAllEncadrerForIdProjet(projetCourant[0]);
+				
+				projetRetour[3] = " ";
+				projetRetour[4] = " ";
+				projetRetour[5] = " ";
+				projetRetour[6] = " ";
+				
+				for(int b = 0; b < allEncadrer.size(); b++){//client
+				
+					if(allEncadrer.get(b)[2].trim().equals("1")){
+						
+						idIntervenant = allEncadrer.get(b)[1];
+						
+						intervenantOfprojet = intervenants.getIntervenants(idIntervenant);
+						
+						if(intervenantOfprojet != null){
+							projetRetour[3] = intervenantOfprojet[2] + " " + intervenantOfprojet[1];
+						}
+
+					}else if(allEncadrer.get(b)[2].trim().equals("2")){//superviseur
+						
+						idIntervenant = allEncadrer.get(b)[1];
+						
+						intervenantOfprojet = intervenants.getIntervenants(idIntervenant);
+						
+						if(intervenantOfprojet != null){
+							projetRetour[4] = intervenantOfprojet[2] + " " + intervenantOfprojet[1];
+						}
+
+					}else if(allEncadrer.get(b)[2].equals("3")){//support_tech
+						
+						idIntervenant = allEncadrer.get(b)[1];
+						
+						intervenantOfprojet = intervenants.getIntervenants(idIntervenant);
+						
+						if(intervenantOfprojet != null){
+							projetRetour[5] = intervenantOfprojet[2] + " " + intervenantOfprojet[1];
+						}
+
+					}
+				}
+				
+				
+				//////////////////////Récuperation etudiants////////////////////
+				
+				
+				etudiantRetour = etudiants.getEtuByGroupe(projetCourant[1]);
+				
+				if(etudiantRetour.size() > 0){
+					
+					int size = etudiantRetour.size();
+					
+					for(int j = 0; j<size; j++){
+						
+						etudiantCourant = etudiantRetour.get(j);
+					
+						
+						if(j == 0){
+							projetRetour[6] += "" + etudiantCourant[3] + " " + etudiantCourant[2] + " - ";
+						}else if(j == size-1){
+							projetRetour[6] +=  " " + etudiantCourant[3] + " " + etudiantCourant[2];
+						
+						}else{
+							projetRetour[6] +=  " " + etudiantCourant[3] + " " + etudiantCourant[2] + " - ";
+	
+						}
+								
+					}
+					
+					allProjetsAffichage.add(projetRetour);
+				}else {
+					
+					projetRetour[6] = " ";
+					
+					allProjetsAffichage.add(projetRetour);
+				}
+				
+			}catch(NumberFormatException e){
+				
+				
+				allProjetsAffichage.add(projetRetour);
+			}
+			
+			
+			
+		}
+
+		return allProjetsAffichage;
+	}
 	
 	
 /////////////////////////////////////////SET///////////////////////////////

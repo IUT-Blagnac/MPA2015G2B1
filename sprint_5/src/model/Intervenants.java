@@ -34,6 +34,43 @@ public class Intervenants {
 	
 /////////////////////////////////////////////////GET//////////////////////////////////////////////////////
 	
+	public String getNbClient(String idIntervenant){
+		
+		Encadrer encadrer = new Encadrer();
+		
+		ArrayList<String[]> allEncadrer = encadrer.getAllEncadrer();
+		
+		int nbClient = 0;
+		
+		for(int i = 0; i < allEncadrer.size(); i++){
+			if(allEncadrer.get(i)[1].trim().equals(idIntervenant.trim()) && allEncadrer.get(i)[2].trim().equals("1")){
+				nbClient++;
+			}
+		}
+		
+		String nbClientString = String.valueOf(nbClient);
+		
+		return nbClientString;
+	}
+
+	public String getNbSuperviseur(String idIntervenant){
+		
+		Encadrer encadrer = new Encadrer();
+		
+		ArrayList<String[]> allEncadrer = encadrer.getAllEncadrer();
+		
+		int nbSuperviseur = 0;
+		
+		for(int i = 0; i < allEncadrer.size(); i++){
+			if(allEncadrer.get(i)[1].trim().equals(idIntervenant.trim()) && allEncadrer.get(i)[2].trim().equals("2")){
+				nbSuperviseur++;
+			}
+		}
+		
+		String nbSuperviseurString = String.valueOf(nbSuperviseur);
+		
+		return nbSuperviseurString;
+	}
 	/**
 	 * getAllIntervenants()
 	 * @return ArrayList de tout les intervenants
