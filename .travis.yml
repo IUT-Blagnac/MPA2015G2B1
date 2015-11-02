@@ -19,13 +19,6 @@ script:
   - casperjs --version
   - cd sprint_5
   - javac -cp .:./bin:./tools/junit.jar -d ./bin ./src/controler/MakeOPTIweb.java ./src/model/*.java
-  - java -jar ../plantuml.jar -Tpng -o srcdoc/images srcdoc/diag0.puml
-  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/presentationFinale.html srcdoc/presentationFinale.txt
-  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_utilisateur_MakeOptiWeb.html srcdoc/documentation_utilisateur.adoc
-  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_technique_MakeOptiWeb.html srcdoc/documentation_technique.adoc
-  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_utilisateur_OptiWeb.html srcdoc/docUtilisateur.txt
-  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_technique_OptiWeb.html srcdoc/docTechnique.txt
-  - ls -alF srcdoc
   - cd bin
   - java -cp .:../../junit.jar:./controler controler.MakeOPTIweb
   - java -cp .:../../junit.jar:./controler model.MakeOPTIwebTest
@@ -37,3 +30,11 @@ script:
   - casperjs test casperSujets.js
   - casperjs test casperEtudiants.js
   - casperjs test casperIntervenants.js
+  - cd ../../
+  - java -jar ../plantuml.jar -Tpng -o srcdoc/images srcdoc/diag0.puml
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/presentationFinale.html srcdoc/presentationFinale.txt
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_utilisateur_MakeOptiWeb.html srcdoc/documentation_utilisateur.adoc
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_technique_MakeOptiWeb.html srcdoc/documentation_technique.adoc
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_utilisateur_OptiWeb.html srcdoc/docUtilisateur.txt
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_technique_OptiWeb.html srcdoc/docTechnique.txt
+  - ls -alF srcdoc
