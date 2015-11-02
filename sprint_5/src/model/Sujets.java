@@ -31,7 +31,7 @@ public class Sujets {
 //////////////////////////////////////GET//////////////////////////////////////
 	public String getGroupe(String id){
 		
-		Projets projets = new Projets(new Etudiants(), new Encadrer());
+		Projets projets = new Projets(new Etudiants(new Encadrer()), new Encadrer());
 		
 		ArrayList<String[]> allProjet = new ArrayList<String[]>();
 		
