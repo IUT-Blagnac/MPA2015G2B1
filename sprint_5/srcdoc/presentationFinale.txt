@@ -1,0 +1,56 @@
+= MPA : Présentation finale de recette groupe2B1
+:Author:  DUT/INFO/M3301
+:lang: fr
+:slideshowlocation: Your computer
+:copyright: {date={localdate}}, {slideshowlocation} *** {author} *** Powered by AsciiDoc and W3C Slidy &#169; 
+:duration: 30
+:incremental: 1
+
+== Bilan fonctionnel du projet
+
+=== Positif 
+
+Les principales fonctionnalités ont été développés.
+
+=== Négatif 
+
+A cause du manque de temps, nous n'avons pas pu installer toutes les fonctionnalités.
+
+== Bilan financer du projet
+
+=== Positif
+
+On travaille gratuitement.
+
+=== Négatif
+
+Nous avons passé 125 heures sur ces deux projets dont de nombreuses heures en dehors des heures de travail.
+
+
+== Bilan technique du projet
+
+
+Nous avons une application fonctionnelle.
+
+Nous avons eu des problèmes d’encodage UTF-8 lors des recettes du sprint 1 au sprint 4 qui on pu être régler au sprint_4bis et sprint_5. 
+Nous avons également été ralentis par des problèmes de connexion internet et d’organisations, coder un même projet à plusieurs n’étant pas facile.
+A plusieurs reprises, nous avons changé de méthode pour afficher les données ce qui nous as ralentit.
+
+
+
+== Bilan humain du projet
+
+=== Positif
+
+Au sein de l’équipe, une bonne ambiance ainsi qu’une synergie de groupe s’est rapidement installée.
+Nous avons pu exercé nos compétences organisationnelles et  en java.
+
+=== Négatif 
+
+Cependant il a été compliquer d’assigner à chacun une tâche, car nous sommes beaucoup de personnes dans le groupe et il n’y avait pas forcement beaucoup de fonctionnalité à développer a chaque sprint sans ce gêner.
+
+== Bilan global du projet
+
+Malgré un certain retard, nous avons réussis à produire une application de qualité, opérationnelle et présentant quasiment toutes les fonctionnalités demandées.
+Tous les compte rendu de sprint se sont bien passés malgré quelques fonctionnalités qui ne marchaient pas.
+
