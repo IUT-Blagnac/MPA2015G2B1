@@ -491,8 +491,8 @@ public class MakeOPTIweb {
 	 * @version sprint4
 	 */
 	public static String writeHTMLInt(){
-		
-		Intervenants intervenants = new Intervenants(new Projets(new Etudiants(new Encadrer())), new Encadrer());
+
+		Intervenants inter = new Intervenants(new Projets(new Etudiants(new Encadrer()), new Encarder), new Encadrer());
 		
 		String content = "";
 		
@@ -595,7 +595,7 @@ public class MakeOPTIweb {
 	public static String writeJSONInt(){
 		
 			
-			Intervenants inter = new Intervenants(new Projets(new Etudiants(new Encadrer()), new Encadrer()));
+			Intervenants inter = new Intervenants(new Projets(new Etudiants(new Encadrer()), new Encarder), new Encadrer());
 			ArrayList<String[]> allInt = new ArrayList<String[]>();
 			
 			String content = "";
