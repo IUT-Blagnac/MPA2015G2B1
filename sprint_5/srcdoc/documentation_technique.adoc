@@ -1,0 +1,106 @@
+= Documentation technique sprint_5
+
+:Author:  Pol-Hervé RAILLARD, Nicolas RIBEREAU, Kueny Gaëtan, Kozlowski Nigel
+
+:doctitle: Documentation Technique MakeOPTIweb
+
+:copyright: {date={localdate}}, {slideshowlocation} *** {author} *** Powered by AsciiDoc and W3C Slidy &#169;
+
+:revnumber: 1.0
+
+:lang: fr
+
+include::docConf.txt[]
+
+'''
+
+*DUT/INFO/M3301*
+
+Version {revnumber}
+
+
+:toc:
+
+
+=====
+_OPTIweb.html_ est une application HTML de *consultation* des projets tutorés gérés par OPTI.
+_OPTIweb.html_ est compatible avec l’ensemble des navigateurs et supports du moment (PC, tablettes, smartphones).
+=====
+
+== Fiche projet - SPRINT 4
+
+
+
+image::univ_noir.png[]
+====
+*Membres de l'équipe enseignante*
+
+ Jean Michel BRUEL, Fabrice PELLEAU, André PÉNINOU et Olivier ROQUES
+
+*Membres du groupe de développement*
+
+ Alex JACQUOT-FERNANDEZ, Nigel KOZLOWSKI, Gaëtan KUENY, Mathis PEZOU, Pol-Hervé RAILLARD, Nicolas RIBEREAU
+
+*Université Toulouse 2 - IUT de Blagnac*
+
+*Formation*
+
+ DUT INFO S3/Module MPA
+
+*Projet*
+
+ OPTI/OPTIweb
+====
+
+
+== Comment lancer l'application OPTIweb?
+
+Lancer, sur un ordinateur possedant l'OS Windows, le fichier "makeOptiWeb.bat". Le fichier MakeOPTIweb.html est alors automatiquement générée das la dossier test.
+
+== Fonctionnalités disponibles - SPRINT 4
+
+Elle génère uniquement et simplement l'application OPTIweb à partir des fichier .csv présent dans le dossier data.
+
+==  Tests
+
+=== Tests de Casper
+
+Ces derniers sont éxecutés par testCasper.bat.
+
+[width="100%",options="header"]
+|==================
+|Test|Vérification|Réussite
+|casperAccueil.js|Test le visuelle de l'accueil de MakeOPTIweb.html | OK
+|casperCredits.js|Test le visuelle de la partie crédits de MakeOPTIweb.html | OK
+|casperEtudiants.js|Test le visuelle de la partie étudiants de MakeOPTIweb.html | OK
+|casperIntervenants.js|Test le visuelle de la partie intervenants de MakeOPTIweb.html | OK
+|casperProjets.js|Test le visuelle de la partie projets de MakeOPTIweb.html | OK
+|casperSujets.js|Test le visuelle de la partie sujets de MakeOPTIweb.html | OK
+|==================
+
+
+=== Tests du MakeOPTIweb
+
+[width="100%",options="header"]
+|==================
+|Test|Vérification|Réussite
+|test_writeHTMLBegin()|Teste le retour de la fonction writeHTMLBegin() qui a pour rôle de générer le début de MakeOPTIweb.html| OK
+|test_writeHTMLEnd()|Teste le retour de la fonction writeHTMLEnd() qui a pour rôle de générer la fin de MakeOPTIweb.html| OK
+|test_writeHTMLCredits()|Teste le retour de la fonction writeHTMLCredits() qui a pour rôle de générer les crédits de MakeOPTIweb.html| OK
+|test_writeHTMLProjet()|Teste le retour de la fonction writeHTMLProjet() qui a pour rôle de générer la partie projet de MakeOPTIweb.html| OK
+|test_writeHTMLSujets()|Teste le retour de la fonction writeHTMLSujets() qui a pour rôle de générer la partie sujet de MakeOPTIweb.html| OK
+|test_writeHTMLEtu()|Teste le retour de la fonction writeHTMLEtu() qui a pour rôle de générer la partie etudiant de MakeOPTIweb.html| OK
+|test_writeHTMLInt()|Teste le retour de la fonction writeHTMLInt() qui a pour rôle de générer la partie intervenant de MakeOPTIweb.html| OK
+|test_writeJSONEtu()|Teste le retour de la fonction writeJSONEtu() qui a pour rôle de générer le JSON etudiants2014_2015.json utiliser par les tests casper | OK
+|test_writeJSONInt()|Teste le retour de la fonction writeJSONInt() qui a pour rôle de générer le JSON intervenants2014_2015.json utiliser par les tests casper| OK
+|==================
+
+
+== Informations
+
+Pour tout renseignement ou demande, veuillez contacter l'équipe à l'adresse suivante :
+
+====
+gaetan.kueny@etu.univ-tlse2.fr
+====
+

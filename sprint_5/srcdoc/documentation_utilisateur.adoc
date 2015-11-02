@@ -1,0 +1,71 @@
+= Documentation technique sprint_5
+
+:Author:  Pol-Hervé RAILLARD, Nicolas RIBEREAU, Kueny Gaëtan, Kozlowski Nigel
+
+:doctitle: Documentation Utilisateur MakeOPTIweb
+
+:copyright: {date={localdate}}, {slideshowlocation} *** {author} *** Powered by AsciiDoc and W3C Slidy &#169;
+
+:revnumber: 1.0
+
+:lang: fr
+
+include::docConf.txt[]
+
+'''
+
+*DUT/INFO/M3301*
+
+Version {revnumber}
+
+
+:toc:
+
+
+=====
+_OPTIweb.html_ est une application HTML de *consultation* des projets tutorés gérés par OPTI.
+_OPTIweb.html_ est compatible avec l’ensemble des navigateurs et supports du moment (PC, tablettes, smartphones).
+=====
+
+== Fiche projet - SPRINT 4
+
+
+
+image::univ_noir.png[]
+====
+*Membres de l'équipe enseignante*
+
+ Jean Michel BRUEL, Fabrice PELLEAU, André PÉNINOU et Olivier ROQUES
+
+*Membres du groupe de développement*
+
+ Alex JACQUOT-FERNANDEZ, Nigel KOZLOWSKI, Gaëtan KUENY, Mathis PEZOU, Pol-Hervé RAILLARD, Nicolas RIBEREAU
+
+*Université Toulouse 2 - IUT de Blagnac*
+
+*Formation*
+
+ DUT INFO S3/Module MPA
+
+*Projet*
+
+ OPTI/OPTIweb
+====
+
+
+== Comment lancer l'application OPTIweb?
+
+Lancer, sur un ordinateur possedant l'OS Windows, le fichier "makeOptiWeb.bat". Le fichier MakeOPTIweb.html est alors automatiquement générée das la dossier test.
+
+== Fonctionnalités disponibles - SPRINT 4
+
+Elle génère uniquement et simplement l'application OPTIweb à partir des fichier .csv présent dans le dossier data.
+
+== Informations
+
+Pour tout renseignement ou demande, veuillez contacter l'équipe à l'adresse suivante :
+
+
+====
+gaetan.kueny@etu.univ-tlse2.fr
+====
