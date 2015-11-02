@@ -15,8 +15,6 @@ script:
   - phantomjs -v
   - python asciidoc-8.6.7/asciidoc.py --version
   - dot -V
-  - echo Hello from DUT INFO Blagnac
-  - ls -alF
   - casperjs --version
   - cd sprint_5
   - javac -cp .:./bin:../junit.jar -d ./bin ./src/controler/MakeOPTIweb.java ./src/model/*.java
