@@ -10,8 +10,8 @@
 
 === Négatif 
 
-A cause du manque de temps, nous n'avons pas pu installer toutes les fonctionnalités.
-Les test Casper ne peuvent pas s'adapter completement à un changement des données (fichier csv)
+    A cause du manque de temps, nous n'avons pas pu installer toutes les fonctionnalités.
+    Les test Casper ne peuvent pas s'adapter completement à un changement des données (fichier csv)
 
 === Positif 
 
@@ -38,7 +38,6 @@ Et le logiciel redmine founit gratuitement par l'université.
 
 
 == Bilan technique du projet
-
 
 === Equipe
 

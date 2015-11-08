@@ -122,13 +122,13 @@ possède la structure +html/jquery/mobile+ suivante :
 </html>
 
 
-<1> css font-awesome
-<2> css jquery-mobile
-<3> javascript jquery
-<4> javascript jquery mobile
-<5> css de gestion des classes d'orientation du support
-<6> Les pages #accueil, #credits, #projets, #sujets, #etudiants et #intervenants sont placées ici
-<7> handler jquery de sélection des projets depuis les pages #sujets, #etudiants ou #intervenants
+1 : css font-awesome
+2 : css jquery-mobile
+3 : javascript jquery
+4 : javascript jquery mobile
+5 : css de gestion des classes d'orientation du support
+6 : Les pages #accueil, #credits, #projets, #sujets, #etudiants et #intervenants sont placées ici
+7 : handler jquery de sélection des projets depuis les pages #sujets, #etudiants ou #intervenants
 
 == OPTIweb : Page d'Accueil
 
@@ -210,9 +210,9 @@ Le programme 'MakeOPTIweb.java' produit pour la page +#projets+ le code +html/jq
 </div>
 <!-- FIN page projets -->
 
-<1> Champ de recherche
-<2> Item du premier projet
-<3> Les autres projets sont placés ici
+1 : Champ de recherche
+2 : Item du premier projet
+3 : Les autres projets sont placés ici
 
 == OPTIweb : Page Sujets
 
@@ -332,11 +332,11 @@ Etudiant<span class="ui-li-count" title="Groupe" style="right: 40px !important;"
 </div>
 <!-- FIN page etudiants -->
 
-<1> Bouton de retour à la page d'accueil
-<2> Champ de recherche 
-<3> Item d'entête de liste
-<4> Item du premier étudiant et chaine de sélection dans les projets 
-<5> Les autres étudiants sont placés ici
+1 : Bouton de retour à la page d'accueil
+2 : Champ de recherche 
+3 : Item d'entête de liste
+4 : Item du premier étudiant et chaine de sélection dans les projets 
+5 : Les autres étudiants sont placés ici
 
 === OPTIweb : Sélectionner un étudiant
 
@@ -388,11 +388,11 @@ BRUEL Jean-Michel
 </div>
 <!-- FIN page intervenants -->
 
-<1> Bouton de retour à la page d'accueil
-<2> Champ de recherche 
-<3> Item d'entête de liste
-<4> Item du premier intervenant et chaine de sélection dans les projets 
-<5> Les autres intervenants sont placés ici
+1 : Bouton de retour à la page d'accueil
+3 : Champ de recherche 
+3 : Item d'entête de liste
+4 : Item du premier intervenant et chaine de sélection dans les projets 
+5 : Les autres intervenants sont placés ici
 
 
 === OPTIweb : Sélectionner un Intervenant
