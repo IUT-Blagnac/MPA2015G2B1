@@ -19,15 +19,15 @@ script:
   - casperjs --version
   - cd sprint_5
   - javac -cp ./src:./bin:./tools/junit.jar -d ./bin ./src/controler/*.java ./src/model/*.java ./src/view/*.java
-  - java -cp ./bin:../../junit.jar:./bin/controler controler.MakeOPTIweb
-  - java -cp ./bin:../../junit.jar:./bin/controler model.MakeOPTIwebTest
-  - java -cp ./bin:../../junit.jar:./bin/controler model.TestCSVLibrairie
-  - java -cp ./bin:../../junit.jar:./bin/controler model.TestEncadrer
-  - java -cp ./bin:../../junit.jar:./bin/controler model.TestEtudiants
-  - java -cp ./bin:../../junit.jar:./bin/controler model.TestGroupe
-  - java -cp ./bin:../../junit.jar:./bin/controler model.TestIntervenants
-  - java -cp ./bin:../../junit.jar:./bin/controler model.TestProjets
-  - java -cp ./bin:../../junit.jar:./bin/controler model.TestSujets
+  - java -cp ./bin:../junit.jar:./bin/controler controler.MakeOPTIweb
+  - java -cp ./bin:../junit.jar:./bin/controler model.MakeOPTIwebTest
+  - java -cp ./bin:../junit.jar:./bin/controler model.TestCSVLibrairie
+  - java -cp ./bin:../junit.jar:./bin/controler model.TestEncadrer
+  - java -cp ./bin:../junit.jar:./bin/controler model.TestEtudiants
+  - java -cp ./bin:../junit.jar:./bin/controler model.TestGroupe
+  - java -cp ./bin:../junit.jar:./bin/controler model.TestIntervenants
+  - java -cp ./bin:../junit.jar:./bin/controler model.TestProjets
+  - java -cp ./bin:../junit.jar:./bin/controler model.TestSujets
   - cd OPTIweb/test
   - cp OPTIweb.html /tmp/OPTIweb.html
   - casperjs test casperAccueil.js
