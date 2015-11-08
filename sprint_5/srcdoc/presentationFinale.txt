@@ -8,46 +8,63 @@
 
 == Bilan fonctionnel du projet
 
-=== Positif 
-
-Les principales fonctionnalités ont été développés.
-
 === Négatif 
 
 A cause du manque de temps, nous n'avons pas pu installer toutes les fonctionnalités.
+Les test Casper ne peuvent pas s'adapter completement à un changement des données (fichier csv)
+
+=== Positif 
+
+Les principales fonctionnalités ont été développés.
+Toutes les fonctionnalités du projet OPTIweb sont présente.
+
 
 == Bilan financer du projet
 
-=== Positif
+=== Personnel 
+125 heures (cf redmine) de travail total. 
+Chaque développeur est payé 10€ de l'heure
 
-On travaille gratuitement.
+Ce qui nous fais un cout de main-d'oeure de : 125 * 10 = 1250 euros
 
-=== Négatif
+=== Matériel 
 
-Nous avons passé 125 heures sur ces deux projets dont de nombreuses heures en dehors des heures de travail.
+6 ordinateurs avec connexion internet (coût : 0€).
+
+=== Logiciel 
+Nous avons utilisés des logiciels gratuits pour le développement (eclispe, SVN
+Turtoise, github).
+Et le logiciel redmine founit gratuitement par l'université.
 
 
 == Bilan technique du projet
 
 
-Nous avons une application fonctionnelle.
+=== Equipe
 
-Nous avons eu des problèmes d’encodage UTF-8 lors des recettes du sprint 1 au sprint 4 qui on pu être régler au sprint_4bis et sprint_5. 
-Nous avons également été ralentis par des problèmes de connexion internet et d’organisations, coder un même projet à plusieurs n’étant pas facile.
-A plusieurs reprises, nous avons changé de méthode pour afficher les données ce qui nous as ralentit.
+Amélioration en programmation java.
+Découverte des tests casper
 
+=== Projet
 
+==== difficulté technique :
+
+test casper (on a du apprendre sur le tas).
+Problemes d'utf-8
 
 == Bilan humain du projet
 
-=== Positif
+=== Les apports personnels d’un tel projet 
 
-Au sein de l’équipe, une bonne ambiance ainsi qu’une synergie de groupe s’est rapidement installée.
-Nous avons pu exercé nos compétences organisationnelles et  en java.
+développer completement un logiciel. 
+Amélioration travaille d’équipe.
+Améioration du management d'une équipe.
 
-=== Négatif 
+=== Ressenti de l'équipe
 
-Cependant il a été compliquer d’assigner à chacun une tâche, car nous sommes beaucoup de personnes dans le groupe et il n’y avait pas forcement beaucoup de fonctionnalité à développer a chaque sprint sans ce gêner.
+bonne entente au sein du groupe, le travail a été bien réparti
+importance de la communication dans un projet.
+les éhanges entre les testeurs et les développeurs s'avèrent primordiaux.
 
 == Bilan global du projet
 

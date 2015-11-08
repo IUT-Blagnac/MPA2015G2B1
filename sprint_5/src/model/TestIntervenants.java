@@ -107,7 +107,7 @@ public class TestIntervenants extends TestCase{
 		ArrayList<String[]> id50Attendu = new ArrayList<String[]>();
 		ArrayList<String[]> resultNull = new ArrayList<String[]>();
 		
-		String[] tabResulat1 = {"1","Remi","BOULLE"};
+		String[] tabResulat1 = {"1","Rémi","BOULLE"};
 		
 		id50Attendu.add(tabResulat1);
 		
@@ -227,7 +227,7 @@ public class TestIntervenants extends TestCase{
 		
 		intervenantsList = intervenantClass.getAffichage(projets, new Sujets());
 		
-		String[] retourLigne1 = {"1", "Remi", "BOULLE","12", "RegExp", "Superviseur"};
+		String[] retourLigne1 = {"1", "Rémi", "BOULLE","12", "RegExp", "Superviseur"};
 		
 		totalAssertions++ ;
 		assertEquals("Vérification retour getAffichage : ", retourLigne1[0] + "" + retourLigne1[1] + "" + retourLigne1[2] + "" + retourLigne1[3] + "" + retourLigne1[4] + "" + retourLigne1[5] , intervenantsList.get(1)[0]+ "" + intervenantsList.get(1)[1]+ "" + intervenantsList.get(1)[2]+ "" + intervenantsList.get(1)[3]+ "" + intervenantsList.get(1)[4]+ "" + intervenantsList.get(1)[5]);
