@@ -164,7 +164,7 @@ Le programme 'MakeOPTIweb.java' produit pour la page d'accueil le code +html/jqu
 </div>
 <!-- FIN page accueil -->
 
-<1> lien de navigation vers la page cible
+1 : lien de navigation vers la page cible
 
 == OPTIweb : Page Projets
 
@@ -256,11 +256,11 @@ Sujet<span class="ui-li-count" title="Groupe" style="right: 40px !important;">Gr
 </div>
 <!-- FIN page sujets -->
 
-<1> Bouton de retour à la page d'accueil
-<2> Champ de recherche 
-<3> Item d'entête de liste
-<4> Item du premier sujet et chaine de sélection dans les projets (cf <<Handler-de-Selection,Handler de sélection des projets correspondants>>)
-<5> Les autres sujets sont placés ici
+1 : Bouton de retour à la page d'accueil
+2 : Champ de recherche 
+3 : Item d'entête de liste
+4 : Item du premier sujet et chaine de sélection dans les projets (cf <<Handler-de-Selection,Handler de sélection des projets correspondants>>)
+5 : Les autres sujets sont placés ici
 
 === OPTIweb : Sélectionner un sujet
 
