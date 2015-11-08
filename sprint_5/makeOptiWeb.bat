@@ -13,5 +13,5 @@ set TESTDIR=./OPTIweb/test/
 set MAKETEST=1
 
 call makejavaOptiWeb.bat
-call makedocOptiWeb.bat
 call %TESTDIR%testCasper.bat
+call makedocOptiWeb.bat

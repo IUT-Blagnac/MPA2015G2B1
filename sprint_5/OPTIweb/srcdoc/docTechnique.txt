@@ -71,7 +71,7 @@ L'application 'OPTIweb.html' nécessite une connexion Internet
 lors de son lancement.
 
 Une fois chargée dans un navigateur, aucune communication réseau
-n'est éffectuée : vous pouvez alors travailler hors connexion.
+n'est effectuée : vous pouvez alors travailler hors connexion.
 ====
 
 == Comment sauvegarder  l'application OPTIweb
@@ -91,8 +91,7 @@ NOTE: Le programme 'MakeOPTIweb.java' utilise la librairie de gestion des fichie
 Le fichier 'OPTIweb.html' produit par le programme 'MakeOPTIweb.java'
 possède la structure +html/jquery/mobile+ suivante :
 
-[source,html]
-----
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -121,7 +120,8 @@ possède la structure +html/jquery/mobile+ suivante :
 </script>
 </body>
 </html>
-----
+
+
 <1> css font-awesome
 <2> css jquery-mobile
 <3> javascript jquery
@@ -144,8 +144,6 @@ La Page d'Accueil permet d'accéder :
 
 Le programme 'MakeOPTIweb.java' produit pour la page d'accueil le code +html/jquery/mobile+ suivant :
 
-[source,html]
-----
 <!-- DEBUT page accueil -->
 <div data-role="page" id="accueil" data-title="OPTIweb - V0.1">
 <div data-role="header" data-add-back-btn="true">
@@ -165,7 +163,7 @@ Le programme 'MakeOPTIweb.java' produit pour la page d'accueil le code +html/jqu
 </div>
 </div>
 <!-- FIN page accueil -->
-----
+
 <1> lien de navigation vers la page cible
 
 == OPTIweb : Page Projets
@@ -177,8 +175,7 @@ de l'année en indiquant leur nom, leur titre, leur client, leur superviseur et 
 
 Le programme 'MakeOPTIweb.java' produit pour la page +#projets+ le code +html/jquery/mobile+ suivant :
 
-[source,html]
-----
+
 <!-- DEBUT page projets -->
 <div data-role="page" id="projets" data-title="OPTIweb - V0.1">
 <div data-role="header" data-add-back-btn="true">
@@ -212,7 +209,7 @@ Le programme 'MakeOPTIweb.java' produit pour la page +#projets+ le code +html/jq
 </div>
 </div>
 <!-- FIN page projets -->
-----
+
 <1> Champ de recherche
 <2> Item du premier projet
 <3> Les autres projets sont placés ici
@@ -226,8 +223,7 @@ de l'année en indiquant leur nom, leur titre et le ou les groupe(s) d'étudiant
 
 Le programme 'MakeOPTIweb.java' produit pour la page +#sujets+ le code +html/jquery/mobile+ suivant :
 
-[source,html]
-----
+
 <!-- DEBUT page sujets -->
 <div data-role="page" id="sujets" data-title="OPTIweb - V0.1">
 <div data-role="header" data-add-back-btn="true">    <!-- <1> -->
@@ -259,7 +255,7 @@ Sujet<span class="ui-li-count" title="Groupe" style="right: 40px !important;">Gr
 </div>
 </div>
 <!-- FIN page sujets -->
-----
+
 <1> Bouton de retour à la page d'accueil
 <2> Champ de recherche 
 <3> Item d'entête de liste
@@ -286,16 +282,11 @@ La sélection des projets correspondants à l'item choisi des pages '#sujets', '
 
 . L'action +click+ sur les items (+li+) comportant 1 attribut +data-find+ 
 +
-[source,javascript]
-----
 $( 'li[data-find]' ).on( 'click',function
-----
 . exécute le code (l'handler) suivant :
 +
-[source,javascript]
-----
 $("#autocomplete-input-projet").val($(this).attr('data-find')).trigger('change');
-----
+
 +
 --
 qui place le contenu actuel de l'attribut +data-find+ dans le champs +input+ de recherche des projets d'id +autocomplete-input-projet+, puis valide la modification.
@@ -313,8 +304,6 @@ de l'année dans une liste numérotée en indiquant leur nom, leur prénom et le
 
 Le programme 'MakeOPTIweb.java' produit pour la page +#etudiants+ le code +html/jquery/mobile+ suivant :
 
-[source,html]
-----
 <!-- DEBUT page etudiants -->
 <div data-role="page" id="etudiants" data-title="OPTIweb - V0.1">
 <div data-role="header" data-add-back-btn="true">    <!-- <1> -->
@@ -342,7 +331,7 @@ Etudiant<span class="ui-li-count" title="Groupe" style="right: 40px !important;"
 </div>
 </div>
 <!-- FIN page etudiants -->
-----
+
 <1> Bouton de retour à la page d'accueil
 <2> Champ de recherche 
 <3> Item d'entête de liste
@@ -368,8 +357,6 @@ de l'année en indiquant leur nom, leur prénom et le nombre de fois où ils son
 
 Le programme 'MakeOPTIweb.java' produit pour la page +#intervenants+ le code +html/jquery/mobile+ suivant :
 
-[source,html]
-----
 <!-- DEBUT page intervenants -->
 <div data-role="page" id="intervenants" data-title="OPTIweb - V0.1">
 <div data-role="header" data-add-back-btn="true">    <!-- <1> -->
@@ -400,7 +387,7 @@ BRUEL Jean-Michel
 </div>
 </div>
 <!-- FIN page intervenants -->
-----
+
 <1> Bouton de retour à la page d'accueil
 <2> Champ de recherche 
 <3> Item d'entête de liste
@@ -432,8 +419,7 @@ La Page Crédits permet d'accéder de consluter le nom du Product Owner, le nom 
 
 Le programme 'MakeOPTIweb.java' produit pour la page '#credits' le code +html/jquery/mobile+ suivant :
 
-[source,html]
-----
+
 <!-- DEBUT page credits -->
 <div data-role="page" id="credits" data-title="OPTIweb - V0.1 - Crédits">
 <div data-role="header" data-add-back-btn="true">    <!-- <1> -->
@@ -462,5 +448,5 @@ Le programme 'MakeOPTIweb.java' produit pour la page '#credits' le code +html/jq
 </div>
 </div>
 <!-- FIN page credits -->
-----
+
 <1> Bouton de retour à la page d'accueil

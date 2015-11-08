@@ -28,7 +28,7 @@ _OPTIweb.html_ est compatible avec l’ensemble des navigateurs et supports du m
 _OPTIweb.html_ sera correctement affiché avec une connection internet, sans cela l'affichage sera minimal.
 =====
 
-== Fiche projet - SPRINT 4
+== Fiche projet
 
 
 
@@ -58,10 +58,91 @@ image::univ_noir.png[]
 
 Lancer, sur un ordinateur possedant l'OS Windows, le fichier "makeOptiWeb.bat". Le fichier MakeOPTIweb.html est alors automatiquement générée dans la dossier test.
 
-== Fonctionnalités disponibles - SPRINT 4
+== Fonctionnalités disponibles
 
 L'application génère uniquement et simplement le fichier OPTIweb.html à partir des fichier .csv présent dans le dossier data.
 
+==  données
+
+Les données sont stockées sous forme de fichiers link:https://fr.wikipedia.org/wiki/Comma-separated_values[CSV] et sont présent dans le sous-dossier data.
+
+=== Description 
+
+==== etudiants2014_2015.csv
+    
+    Ce fichier contient les informations à propos des étudiants. Il est sous la forme : groupe;id;nom;prenom
+    groupe : le groupe de l'étudiant (la valeur peut être vide)
+     -id : l'id de létudiant (obligatoire)
+     -nom : le nom de l'étudiant (obligatoire)
+     -prénom: le prénom de l'étudiant (obligatoire)
+
+==== intervenants2014_2015.csv
+    
+    Ce fichier contient les informations à propos des intervenants. Il est sous la forme : id;prenom;nom
+     -id : l'id de l'intervenant (obligatoire)
+     -nom : le nom de l'intervenant (obligatoire)
+     -prénom: le prénom de l'intervenant (obligatoire)
+     
+==== sujets2014_2015.csv
+    
+    Ce fichier contient les informations à propos des sujets. Il est sous la forme : id;nom;titre
+     -id : l'id du sujet (obligatoire)
+     -nom : le nom du sujet (obligatoire)
+     -titre: le titre du sujet (obligatoire)
+     
+==== projets2014_2015.csv
+
+    Ce fichier fais le lien entre les groupes d'étudiant et leur sujet. Il est sous la forme : id;groupe;sujet
+     -id : l'id du projet (obligatoire)
+     -groupe : l'id du groupe (obligatoire)
+     -sujet : id du sujet lié au groupe (la valeur peut être vide, sujet pas encore attribué)
+     
+==== encadrer.csv
+    
+    Ce fichier fais le lien entre les intervenant et les différents projets, pour chaque projet il définit le rôle de chauqe intervenant s'il sont attribué. Il est sous la forme :    idProjet;idIntervenant;role
+     -idProjet : l'id du projet (obligatoire)
+     -idIntervenant : l'id de l'intervenant (obligatoire)
+     -role : l'id du role attribué à l'intervenant (obligatoire), les différents id sont définit dans le fichier roles2014_2105.csv
+
+==== roles2014_2105.csv
+
+    Ce fichier définit les différents rôles possible. Il est sous la forme id;libellé
+     -id : l'id du rôle (obligatoire)
+     -libellé : le libellé du rôle (obligatoire)
+     
+==== groupe.csv
+
+    Ce fichier définit les différents groupes d'étudiants. Il est sous la forme idGroupe;libellé
+     idGroupe : l'id du groupe 
+     libellé : le libellé du groupe
+     
+==== voeux.csv 
+
+    Ce fichier indique les voeux de chaque groupe. Il est sous la forme : Groupe;Sujet;numero
+     Groupe : l'id du groupe
+     Sujet : l'id du sujet
+     numero : le numero du voeux
+     
+=== Modifications
+
+    Tout les fichiers (sauf le fichier roles2014_2015.csv) peuvent être modifié en respectant la forme du fichier édicter ci-dessus. Sans ces règles, les applications OPTI et OPTIweb ne marcheront pas correctement. 
+    
+    Il est également possible de modifier les fichier via l'application OPTI.
+    
+    ATTENTION :  hormis pour les fichiers intervenants2014_2015.csv et etudiants2014_2015.csv, la modifications des fichiers peut faire échouer les différents tests.
+ 
+== fichier JSON
+
+    les fichier JSON sont générés lors de l'execution de MakeOptiweb et on sont utilisés par les tests casper (voir ci-dessous) lors des tests de l'applications.
+    
+    Pour le moment deux fichier JSON sont générés dans le sous répertoire OptiWeb/test/ :
+     - intervenants2014_2015.json (génerer à partir du fichier intervenants2014_2015.csv)
+     - etudiants2014_2015.json (génerer à partir du fichier etudiants2014_2015.csv)
+    
+== Restant à  faire
+
+    Rendre les test indépendant de la modifications des fichiers, il faudra ainsi générer un fichier JSON pour chaque fichier CSV utiliser durant les test.
+    
 ==  Tests
 
 === Tests de Casper
@@ -129,6 +210,286 @@ Ces derniers sont éxecutés par testCasper.bat.
 === CSVLibrairie
     CSVLibrairie permet d'écrire dans les fichier csv.
 
+== Fonctions utilisé dans MakeOptiweb.java
+
+=== HTMLEcrase()
+    
+    Créer le fichier OptiWeb.html dans le repertoir Optiweb/test s'il n'existe pas, sinon il écrase le contenu existant
+    
+=== writeHTMLBegin()
+
+    Ecris le début du fichier html suivant :
+    
+    <!DOCTYPE html>
+      <html>
+        <head>
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="generator" content="OPTIweb VOPTIweb" />
+          <title>0.1 - V0.1</title>
+          <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+          <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+          <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+          <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+          <style type='text/css'>    
+            @media all and (orientation:portrait) { .landscape {display: none;} }
+            @media all and (orientation:landscape) { .landscape {display: inline;} }
+          </style>
+        </head>
+        <body>
+          <!-- DEBUT page accueil --> 
+          <div data-role="page" id="accueil" data-title="OPTIweb - V0.1"> 
+            <div data-role="header" data-add-back-btn="true"> 
+              <h1>P<span class="landscape">rojets </span>tut<span class="landscape">orés</span> 2014-2015<br/>Département INFO<span class="landscape">RMATIQUE</span><br/>IUT de Blagnac</h1> 
+              <a href="#credits" data-theme="b" class="ui-btn-right">Crédits</a> 
+              <!-- <1> --> 
+            </div> 
+            <div data-role="content"> 
+              <ul data-role="listview" data-inset="true" id="listeSources"> 
+                <li><a href="#projets"><i class="fa fa-tasks"></i> Projets</a></li> 
+                <!-- <1> --> 
+                <li><a href="#sujets"><i class="fa fa-copy"></i> Sujets</a></li> 
+                <!-- <1> --> 
+                <li><a href="#etudiants"><i class="fa fa-group"></i> Etudiants</a></li> 
+                <!-- <1> -->
+                <li><a href="#intervenants"><i class="fa fa-group"></i> Intervenants</a></li> 
+                <!-- <1> --> 
+              </ul> 
+            </div> 
+            <div data-role="footer"> 
+              <h4>OPTIweb V<span class="landscape">ersion </span>0.1 <i class="fa fa- fa-2x"></i></h4>
+            </div> 
+          </div>
+           <!-- FIN page accueil -→
+
+ 1 : lien de navigation vers la page cible
+ 
+ 
+=== writeHTMLCredits()
+
+    Cette fonction écrit la partie crédit :
+    
+    <!-- DEBUT page credits -->
+    <div data-role="page" id="credits" data-title="OPTIweb - V0.1 - Crédits"> 
+      <div data-role="header" data-add-back-btn="true"> 
+        <!-- <1> -->
+        <h1>Crédits</h1> 
+      </div> 
+      <div data-role="content"> 
+        <p>Cette application a été réalisée dans le cadre du module M3301/MPA du DUT Informatique à l’IUT de Blagnac.</p> 
+        <ul data-role="listview" data-inset="true" id="contacts" data-theme="a" data-divider-theme="b"> 
+          <li data-role="list-divider">Product Owner</li> 
+          <li>André PÉNINOU</li> 
+          <li>Université Toulouse 2 - IUT de Blagnac <br/>Département INFORMATIQUE</li> 
+        </ul> 
+        <ul data-role="listview" data-inset="true" id="listecredits" data-theme="a" data-divider-theme="b"> 
+          <li data-role="list-divider">Membres de l'équipe enseignante</li> 
+          <li>Jean-Michel BRUEL</li>
+          <li>Jean-Michel INGLEBERT</li>
+          <li>André PÉNINOU</li>
+          <li>Olivier ROQUES</li> 
+        </ul> 
+        <ul data-role=\"listview\" data-inset=\"true\" id=\"listecredits\" data-theme=\"a\" data-divider-theme=\"b\">
+          <li data-role=\"list-divider\">Membres de l'équipe de développement</li>
+          <li>Alex JACQUOT-FERNANDEZ</li>
+          <li>Nigel KOZLOWSKY</li>
+          <li>Gaëtan KUENY</li>
+          <li>Mathis PEZOU</li>
+          <li>Pol-Hervé RAILLARD</li>
+          <li>Nicolas RIBEREAU</li>
+        </ul>
+        <ul data-role="listview" data-inset="true" id="listepowered" data-theme="a" data-divider-theme="b"> 
+          <li data-role="list-divider">Propulsé par</li> 
+          <li><a href="http://jquerymobile.com/" target="autrePage">http://jquerymobile.com/</a></li>
+          <li><a href="http://fortawesome.github.io/Font-Awesome/" target="autrePage">http://fortawesome.github.io/Font-Awesome/</a></li> 
+        </ul> 
+      </div> 
+      <div data-role="footer"> 
+        <h4>OPTIweb V<span class="landscape">ersion </span>0.1 <i class="fa fa- fa-2x"></i></h4> 
+      </div> 
+    </div> 
+    <!-- FIN page credits -->
+
+    1 : Bouton de retour à la page d’accueil
+
+=== writeHTMLProjet ()
+
+    Cette fontion écris la partie projet : 
+    
+    <!-- DEBUT page projets -->
+    <div data-role="page" id="projets" data-title="OPTIweb - V0.1"> 
+      <div data-role="header" data-add-back-btn="true"> 
+        <!-- <1> -->
+        <h1>Projets 2014-2015</h1>
+      </div> 
+      <div data-role="content"> 
+        <form class="ui-filterable"> 
+          <input id="autocomplete-input-projet" name="projet" data-type="search" placeholder="Vous cherchez ?…"> 
+          <!-- <2> --> 
+        </form> 
+        <ol id="listeprojets" data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="false" data-input="#autocomplete-input-projet"> 
+          <li> 
+            <!-- <3> --> 
+            <p> <b>[Archeologie]</b> Groupe de recherche Chasséen Méridional </p> 
+            <p> <b>Client :</b> TISSIER Evelyne </p> 
+            <p> <b>Superviseur :</b> CANUT Marie-Françoise </p> 
+            <p> <b>Groupe A :</b> Etienne LARROUY - Victor PINQUIER - Antoine RIVALIER - Jean-Sebastien TRILLE - </p> 
+          </li> 
+          <!-- <4> --> 
+        </ol> 
+      </div> 
+      <div data-role="footer"> 
+        <h4>OPTIweb V<span class="landscape">ersion </span>0.1 <i class="fa fa-tasks fa-2x"></i></h4>
+      </div> 
+    </div> 
+    <!-- FIN page projets -->
+
+    1 : Bouton de retour à la page d’accueil
+    2 : Champ de recherche
+    3 : Item du premier projet
+    4 : Les autres projets sont placés ici
+    
+=== writeHTMLSujets()
+
+    Cette fonction écris la partie sujet :
+    
+    <!-- DEBUT page sujets -->
+    <div data-role="page" id="sujets" data-title="OPTIweb - V0.1"> 
+      <div data-role="header" data-add-back-btn="true"> 
+        <!-- <1> --> 
+        <h1>Sujets 2014-2015</h1>
+      </div> 
+      <div data-role="content">
+        <form class="ui-filterable"> 
+          <input id="autocomplete-input-sujet" name="sujet" data-type="search" placeholder="Vous cherchez ?"> 
+            <!-- <2> -->
+        </form> 
+        <ol id="listesujets" data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="false" data-input="#autocomplete-input-sujet" data-divider-theme="b" data-count-theme="a">
+          <li data-role="list-divider"> 
+            <!-- <3> --> 
+            Sujet<span class="ui-li-count" title="Groupe" style="right: 40px !important;">Groupe</span>
+          </li> 
+          <li data-find="[ApexEComm]"> 
+            <!-- <4> --> 
+            <a href="#projets">[ApexEComm] <br/> 
+              <div style="white-space:normal;"> 
+                <span><b>Application et tutoriel Oracle Apex pour un site d’e-commerce</b> </span><span class="ui-li-count">I</span> 
+              </div> 
+            </a> 
+          </li> 
+          <!-- <5> --> 
+        </ol> 
+      </div> 
+      <div data-role="footer"> 
+        <h4>OPTIweb V<span class="landscape">ersion </span>0.1 <i class="fa fa-copy fa-2x"></i></h4> 
+      </div> 
+    </div> 
+    <!-- FIN page sujets -->
+    
+    1 : Bouton de retour à la page d’accueil
+    2 : Champ de recherche
+    3 : Item d’entête de liste
+    4 : Item du premier sujet et chaine de sélection dans les projets (cf Handler de sélection des projets correspondants)
+    5 :  Les autres sujets sont placés ici
+    
+=== writeHTMLEtu()
+
+    Cette fontion écrit la partie étudiant : 
+    
+    <!-- DEBUT page etudiants -->
+    <div data-role="page" id="etudiants" data-title="OPTIweb - V0.1"> 
+      <div data-role="header" data-add-back-btn="true"> 
+        <!-- <1> -→ 
+        <h1>Etudiants 2014-2015</h1>
+      </div> 
+      <div data-role="content">
+        <form class="ui-filterable"> 
+          <input id="autocomplete-input-etudiant" name="etudiant" data-type="search" placeholder="Etudiant ou Groupe X"> 
+          <!-- <2> -->
+        </form> 
+        <ol id="listeetudiants" data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="false" data-input="#autocomplete-input-etudiant" data-divider-theme="b"> 
+          <li data-role="list-divider"> 
+            <!-- <3> -->
+            Etudiant<span class="ui-li-count" title="Groupe" style="right: 40px !important;">Groupe</span> 
+          </li> 
+          <li data-find="Arnauld ALEX"> 
+            <!-- <4> --> 
+            <a href="#projets">ALEX Arnauld<span class="ui-li-count" title="Groupe">Groupe F</span> </a> 
+          </li> 
+          <!-- <5> -->
+        </ol> 
+      </div> 
+      <div data-role="footer"> 
+        <h4>OPTIweb V<span class="landscape">ersion </span>0.1 <i class="fa fa-group fa-2x"></i></h4> 
+      </div> 
+    </div> 
+    <!-- FIN page etudiants -->
+    
+    1 : Bouton de retour à la page d’accueil
+    2 : Champ de recherche
+    3 : Item d’entête de liste
+    4 : Item du premier étudiant et chaine de sélection dans les projets
+    5 : Les autres étudiants sont placés ici
+    
+=== writeHTMLInt()
+
+    Cette fonction écrit la partie intervenant : 
+    
+    <!-- DEBUT page intervenants -->
+    <div data-role="page" id="intervenants" data-title="OPTIweb - V0.1"> 
+      <div data-role="header" data-add-back-btn="true"> 
+        <!-- <1> -->
+        <h1>Intervenants 2014-2015</h1>
+      </div> 
+      <div data-role="content">
+        <form class="ui-filterable"> 
+          <input id="autocomplete-input-intervenant" name="intervenant" data-type="search" placeholder="Intervenant"> 
+          <!-- <2> -->
+        </form> 
+        <ul id="listeintervenants" data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="false" data-input="#autocomplete-input-intervenant" data-divider-theme="b"> 
+          <li data-role="list-divider"> 
+            <!-- <3> --> 
+            Intervenant<span class="ui-li-count" style="right: 110px !important;" title="Client">Client</span><span class="ui-li-count" title="Superviseur">Superviseur</span>
+          </li> 
+          <li data-find="BRUEL Jean-Michel"> 
+            <!-- <4> -->
+            <a href="#projets"> BRUEL Jean-Michel <span class="ui-li-count" style="right: 120px !important;" title="Client">3</span> <span class="ui-li-count" title="Superviseur">0</span> </a> 
+          </li> 
+          <!-- <5> -->
+        </ul> 
+      </div> 
+      <div data-role="footer"> 
+        <h4>OPTIweb V<span class="landscape">ersion </span>0.1 <i class="fa fa-group fa-2x"></i></h4> 
+      </div> 
+    </div> 
+    <!-- FIN page intervenants -->
+    
+    1 : Bouton de retour à la page d’accueil
+    2 : Champ de recherche
+    3 : Item d’entête de liste
+    4 : Item du premier intervenant et chaine de sélection dans les projets
+    5 : Les autres intervenants sont placés ici
+
+=== writeHTMLEnd ()
+
+    Cette fonction s'occupe d'écrire la fin du fichier html : 
+    
+    <script>
+      $( 'li[data-find]' ).on( 'click',function(event){
+        $(\"#autocomplete-input-projet\").val($(this).attr('data-find')).trigger('change'); 
+      });
+    </script>
+    </body>
+    </html>
+    
+=== writeJSONEtu() 
+
+    Cette fonction s'occupe de générer le fichier etudiants2014_2015.json
+    
+=== writeJSONInt()
+
+    Cette fonction s'occupe de générer le fichier intervenants2014_2015.json
+    
 
 == Informations
 
