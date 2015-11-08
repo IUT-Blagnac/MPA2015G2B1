@@ -419,7 +419,7 @@ public class MakeOPTIwebTest extends TestCase{
 							"{\"group\": \"I\",",
 							"\"id\": \"35\",",
 							"\"nom\": \"HANNE\",",
-							"\"prenom\": \"Rémi\"},",
+							"\"prenom\": \"Remi\"},",
 							"{\"group\": \"I\",",
 							"\"id\": \"46\",",
 							"\"nom\": \"MARTIN\",",
