@@ -189,7 +189,7 @@ public class TestProjets extends TestCase{
 			  System.out.print("OUPS !"); 
 		  }
 		
-		  System.out.println(" "+bilanAssertions+"/"+totalAssertions+" assertions verifiees");
+		  System.out.println(" "+bilanAssertions+"/"+totalAssertions+" assertions verifiees ");
 		  
 	  } // fin main
 

@@ -274,6 +274,7 @@ public class Intervenants {
 			i++;
 		}
 		allIntervenants.set(i, newIntervenants);
+		
 		CSVLibrairie.saveCSV(csvpath, allIntervenants, ";");
 	}
 	
@@ -314,6 +315,7 @@ public class Intervenants {
 		CSVLibrairie.saveCSV(csvpath, allIntervenants, ";");
 	}
 	
+
 	/**
 	 * removeIntervenant(id)
 	 * supprime l'intervenant spécifié s'il existe, sinon ne fais rien

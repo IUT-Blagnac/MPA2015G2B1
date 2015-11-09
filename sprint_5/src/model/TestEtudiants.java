@@ -43,7 +43,7 @@ public class TestEtudiants extends TestCase{
 			
 			while ((ligne = br.readLine())!=null){
 				totalAssertions++ ;
-				assertEquals("Vérification retour getAllEtu : ", etudiantsList.get(i)[0]+";"+ etudiantsList.get(i)[1] + ";" + etudiantsList.get(i)[2] + ";" + etudiantsList.get(i)[3] , ligne);
+				assertEquals("Vérification retour getAllEtu : " , etudiantsList.get(i)[0]+";"+ etudiantsList.get(i)[1] + ";" + etudiantsList.get(i)[2] + ";" + etudiantsList.get(i)[3] , ligne);
 				bilanAssertions++ ;
 				i++;
 			}
@@ -460,10 +460,10 @@ public class TestEtudiants extends TestCase{
 		  junit.textui.TestRunner.run(new TestSuite(TestEtudiants.class));
 		
 		  if (bilanAssertions == totalAssertions) { 
-			  System.out.print("Bravo !"); 
+			  System.out.print("Bravo ! "); 
 		  }
 		  else  { 
-			  System.out.print("OUPS !"); 
+			  System.out.print("OUPS ! "); 
 		  }
 		
 		  System.out.println(" "+bilanAssertions+"/"+totalAssertions+" assertions verifiees");

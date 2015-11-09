@@ -38,7 +38,7 @@ public class TestSujets extends TestCase{
 			
 			while ((ligne = br.readLine())!=null){
 				totalAssertions++ ;
-				assertEquals("Vérification retour getAllSujets : ", sujetsList.get(i)[0]+";"+ sujetsList.get(i)[1] + ";" + sujetsList.get(i)[2], ligne);
+				assertEquals("Vérification retour getAllSujets  : ", sujetsList.get(i)[0]+";"+ sujetsList.get(i)[1] + ";" + sujetsList.get(i)[2], ligne);
 				bilanAssertions++ ;
 				i++;
 			}

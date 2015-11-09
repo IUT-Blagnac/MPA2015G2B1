@@ -383,10 +383,10 @@ public class TestIntervenants extends TestCase{
 		
 		  		  
 		  if (bilanAssertions == totalAssertions) { 
-			  System.out.print("Bravo !"); 
+			  System.out.print("Bravo ! "); 
 		  }
 		  else  { 
-			  System.out.print("OUPS !"); 
+			  System.out.print("OUPS ! "); 
 		  }
 		
 		  System.out.println(" "+bilanAssertions+"/"+totalAssertions+" assertions verifiees");

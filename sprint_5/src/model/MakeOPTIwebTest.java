@@ -648,10 +648,10 @@ public class MakeOPTIwebTest extends TestCase{
 		  junit.textui.TestRunner.run(new TestSuite(MakeOPTIwebTest.class));
 		
 		  if (bilanAssertions == totalAssertions) { 
-			  System.out.print("Bravo !"); 
+			  System.out.print("Bravo ! "); 
 		  }
 		  else  { 
-			  System.out.print("OUPS !"); 
+			  System.out.print("OUPS ! "); 
 		  }
 		
 		  System.out.println(" "+bilanAssertions+"/"+totalAssertions+" assertions verifiees");

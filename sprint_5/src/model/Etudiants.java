@@ -373,6 +373,7 @@ public class Etudiants {
 		for (int i=1; i<allEtudiant.size(); i++){
 		
 			if(allEtudiant.get(i)[1].equals(newId)){
+				
 				allEtudiant.remove(i);
 				this.nbEtu --;
 			}
