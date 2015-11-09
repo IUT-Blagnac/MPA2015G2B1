@@ -37,7 +37,6 @@ script:
   - casperjs test casperEtudiants.js
   - casperjs test casperIntervenants.js
   - cd ../../
-  - java -jar ../plantuml.jar -Tpng -o srcdoc/images srcdoc/diag0.puml
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/presentationFinale.html srcdoc/presentationFinale.txt
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_utilisateur_MakeOptiWeb.html srcdoc/documentation_utilisateur_MakeOPTI.adoc
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_technique_MakeOptiWeb.html srcdoc/documentation_technique_MakeOPTI.adoc
