@@ -4,9 +4,13 @@
 @echo // TEST Casper
 @echo ///////////////////////////////////////////////////////
 
+cd OPTIweb/test/
+
 call casperjs.bat test casperAccueil.js
 call casperjs.bat test casperCredits.js
 call casperjs.bat test casperProjets.js
 call casperjs.bat test casperSujets.js
 call casperjs.bat test casperEtudiants.js
 call casperjs.bat test casperIntervenants.js
+
+cd ../../
