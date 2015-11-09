@@ -34,6 +34,7 @@ public class Encadrer {
 	*@version sprint_2
 	*/
 	public ArrayList<String []> getAllEncadrer() {
+		
 		return allEncadrer;
 	}
 	
@@ -113,7 +114,7 @@ public class Encadrer {
 	public void removeEncadrer(String id, String idIntervenant){
 		
 		for(int i = 0; i < allEncadrer.size(); i++){
-			if(allEncadrer.get(i)[0].equals(id) && allEncadrer.get(i)[1].equals(idIntervenant) ){
+			if(allEncadrer.get(i)[0].equals(id) && allEncadrer.get(i)[1].equals(idIntervenant)){
 				allEncadrer.remove(i);
 				nbEncadrer --;
 			}
@@ -132,7 +133,6 @@ public class Encadrer {
 				nbEncadrer --;
 			}
 		}
-		
 		CSVLibrairie.saveCSV(csvpath, allEncadrer, ";");
 	}
 	
