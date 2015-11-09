@@ -39,8 +39,10 @@ script:
   - cd ../../
   - java -jar ../plantuml.jar -Tpng -o srcdoc/images srcdoc/diag0.puml
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/presentationFinale.html srcdoc/presentationFinale.txt
-  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_utilisateur_MakeOptiWeb.html srcdoc/documentation_utilisateur.adoc
-  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_technique_MakeOptiWeb.html srcdoc/documentation_technique.adoc
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_utilisateur_MakeOptiWeb.html srcdoc/documentation_utilisateur_MakeOPTI.adoc
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_technique_MakeOptiWeb.html srcdoc/documentation_technique_MakeOPTI.adoc
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_utilisateur_Opti.html srcdoc/documentation_utilisateur_OPTI.adoc
+  - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o srcdoc/documentation_technique_Opti.html srcdoc/documentation_technique_OPTI.adoc
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o OPTIweb/srcdoc/documentation_utilisateur_OptiWeb.html OPTIweb/srcdoc/docUtilisateur.txt
   - python ../asciidoc-8.6.7/asciidoc.py -a data-uri -o OPTIweb/srcdoc/documentation_technique_OptiWeb.html OPTIweb/srcdoc/docTechnique.txt
   - python tools/asciidoc-8.6.9/asciidoc.py -a data-uri -b slidy -o srcdoc/presentationFinale.html srcdoc/presentationFinale.txt 
