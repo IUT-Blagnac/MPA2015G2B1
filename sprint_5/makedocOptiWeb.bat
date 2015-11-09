@@ -4,12 +4,10 @@
 @echo // COMPILATION documentation technique et utilisateur
 @echo ///////////////////////////////////////////////////////
 
-python %ASCIIDOCDIR%asciidoc.py -a toc -a toclevels=4 -o %DOCDIR2%documentation_utilisateur_MakeOptiWeb.html %SRCDOCDIR2%documentation_utilisateur.adoc
-python %ASCIIDOCDIR%asciidoc.py -a toc -a toclevels=4 -o %DOCDIR2%documentation_technique_MakeOptiWeb.html %SRCDOCDIR2%documentation_technique.adoc
+python %ASCIIDOCDIR%asciidoc.py -a toc -a toclevels=4 -o %DOCDIR2%documentation_utilisateur_MakeOptiWeb.html %SRCDOCDIR2%documentation_utilisateur_MakeOPTI.adoc
+python %ASCIIDOCDIR%asciidoc.py -a toc -a toclevels=4 -o %DOCDIR2%documentation_technique_MakeOptiWeb.html %SRCDOCDIR2%documentation_technique_MakeOPTI.adoc
 python %ASCIIDOCDIR%asciidoc.py -a toc -a toclevels=4 -o %DOCDIR%docUtilisateur_OptiWeb.html %SRCDOCDIR%docUtilisateur.txt
-python %ASCIIDOCDIR%asciidoc.py -a toc -a toclevels=4 -o %DOCDIR%ddocTechnique_OptiWeb.html %SRCDOCDIR%docTechnique.txt
-
-
+python %ASCIIDOCDIR%asciidoc.py -a toc -a toclevels=4 -o %DOCDIR%docTechnique_OptiWeb.html %SRCDOCDIR%docTechnique.txt
 pause
 
 @echo ///////////////////////////////////////////////////////

@@ -1,0 +1,292 @@
+= Documentation Utilisateur Sprint_4bis
+
+:Author:  Pol-Hervé RAILLARD, Kueny Gaëtan , Kozlowski Nigel
+:doctitle: Documentation Utilisateur du Projet MPA-M3301-G2B1
+:copyright: {date={localdate}}, {slideshowlocation} *** {author} *** Powered by AsciiDoc and W3C Slidy &#169;
+:revnumber: 3
+
+include::docConf.txt[]
+
+:toc:
+
+
+== Présentation
+
+=== Présentation de l'application :
+* Notre application de gestion OPTI, réalisée dans le cadre du module MPA, permet aux professeurs :
+
+** de gérer tous les acteurs de projets tutorés dans les projets
+** de gérer l’affectation semi-automatique des projets aux groupes étudiants
+** de gérer la publication des informations destinées aux différents intervenants et aux progiciels institutionnels
+** de gérer l'évaluation de chaque projet
+
+* Membres de l'équipe :
+** JACQUOT Alex
+** KOZLOWSKI Nigel
+** KUENY Gaëtan
+** PEZOU Mathis
+** RAILLARD Pol-Hervé
+** RIBEREAU Nicolas
+
+=== Univesité Toulouse 2 Jean Jaurès
+
+ L’Université Toulouse - Jean Jaurès, université d’arts, lettres et langues et sciences humaines et sociales, est membre fondateur du PRES Université de Toulouse. Héritière de la faculté des lettres, elle s’enracine dans une tradition de plusieurs siècles et s’inscrit dans une longue tradition d’humanisme et d’ouverture disciplinaire. Créée en 1229, elle connaît au XVIème siècle, une grande renommée, puisqu’elle accueille des humanistes prestigieux tels Michel Servet, Étienne Dolet, Michel de l'Hospital, Rabelais et probablement Montaigne. En 1808, devenue Université impériale, elle regroupe les Facultés de Théologie Catholique et Protestante, des Lettres, de Droit, des Sciences et une école de Médecine. Au XXe siècle, l'Université des Lettres atteint son plein développement : elle quitte le centre-ville en 1968 pour s'installer définitivement en 1971 dans le nouveau quartier du Mirail. En 1984, c’est la loi Savary qui lui donne ses structures actuelles : trois Conseils et des Unités de Formation et de Recherche. Depuis, ses effectifs ont presque doublé : de 14 000 étudiants en 1984, elle est passée aujourd'hui à plus de 23 000. Outre les arts, lettres et langues et les sciences humaines et sociales, y sont également enseignées les mathématiques informatiques mais également les sciences économiques et de gestion.
+
+=== IUT de Blagnac
+
+ Rattaché à l’Université Toulouse Le Mirail, l’Institut Universitaire de Technologie (IUT) de Blagnac constitue une originalité qui fait son succès en :
+  - Alliant les enseignements fondamentaux et les disciplines technologiques
+  - Associant les enseignants-chercheurs, les enseignants du second degré et les industriels
+  - Offrant aux étudiants un encadrement rapproché et la fréquentation de l’Entreprise
+
+=== DUT INFO S3/Module MPA
+
+ Ce module est en continuité du module de Gestion de Projet, et nous permet de développer de nouvelles techniques de travail collaboratif plus efficace.
+
+== Application
+
+=== Backlog du produit
+Les fonctionnalités initiales demandées sont les suivantes :
+
+* Ajout de contenu des fichiers :
+**  Ajouter dans la liste des étudiants.
+**  Ajouter dans liste des intervenants.
+**  Ajouter dans liste des sujets.
+**  Ajouter dans liste des projets.
+
+* Modification de contenu des fichiers :
+**  Modifier dans la liste des étudiants.
+**  Modifier dans liste des intervenants.
+**  Modifier dans liste des sujets.
+**  Modifier dans liste des projets.
+
+* Suppression de contenu des fichiers :
+**  Supprimer dans la liste des étudiants.
+**  Supprimer dans la liste des intervenants.
+**  Supprimer dans la liste des sujets.
+**  Supprimer dans la liste des projets.
+
+*  Lister le contenu des fichiers :
+**  Afficher la liste des étudiants (en indiquant le groupe, le sujet, le projet et l’ensemble des intervenants du projet).
+**  Afficher la liste des intervenants (en indiquant pour chaque projet, le sujet, le rôle, le groupe et le projet).
+**  Afficher la liste des sujets.
+**  Afficher la liste des projets/groupes (en indiquant le projet, le sujet, les étudiants et l’ensemble des intervenants du projet).
+** Afficher tous les sujets saisis en voeux n°X. (ne sera pas implémenté)
+** Afficher en fonction d'un sujet le classement attribué par les groupes d'étudiants. (ne sera pas implémenté)
+** Afficher en fonction d'un sujet le classement attribué par les groupes d'étudiants, sans compter ceux qui ont déjà un sujet. (ne sera pas implémenté)
+
+* Affection :
+** Saisie des voeux de chaque étudiants (sous la forme d'un classement de 1 à nombreDeSujets).
+** Création d'un nouveau projet en sélectionnant un sujet et un groupe.
+** Affectation d'un intervenant à un projet et assignement à un rôle (superviseur, support technique ou rapporteur).
+
+
+
+=== Fonctionnalités
+
+Les fonctionnalités opérationelles à ce stade de développement sont cochées dans le classement suivant :
+
+==== Acces à l'application seulement aux administrateur
+
+    Afin d'accer à l'application il vous faut saisir le login et le mot de passe que seul les administrateurs connaissent.
+    
+image::login.png[]
+
+==== A Propos
+    
+    Il suffit de cliquer sur l'onglet Option, qui affichera un menu déroulant, incluant le bouton "A Propos".
+    Cette fenêtre vous permettra de prendre connaisance de la composition de l'équipe de développement ainsi que de votre version logiciel.
+    
+image::apropos.png[]
+
+
+==== Ajouter un nouveau étudiant :
+
+    Dans la sous-partie "Etudiant", cliquez sur le bouton "Creer".
+    Dans la fenêtre s'ouvrant, il vous faudra renseigner le nom de l'étudiant.
+    Pour confirmer, cliquez sur "OK", si vous souhaitez abandonner la création, cliquez sur "Annuler".
+
+image::ajouteretudiant.png[]
+    
+==== Ajouter un nouveau intervenant :
+
+    Dans la sous-partie "Intervenant", cliquez sur le bouton "Creer".
+    Dans la fenêtre s'ouvrant, il vous faudra renseigner le prénom ainsi que le nom de l'intervenant.
+    Pour confirmer, cliquez sur "OK", si vous souhaitez abandonner la création, cliquez sur "Annuler".
+    
+image::ajouterIntervenant.png[]
+    
+==== Ajouter un nouveau sujet :
+
+    Dans la sous-partie "Sujet", cliquez sur le bouton "Creer".
+    Dans la fenêtre s'ouvrant, il vous faudra renseigner le nom, ainsi que le contenu du sujet.
+    Pour confirmer, cliquez sur "OK", si vous souhaitez abandonner la création, cliquez sur "Annuler".
+    
+image::ajouterSujet.png[]
+
+==== Ajouter un nouveau groupe :
+
+    Dans la sous-partie "Groupe", cliquez sur le bouton "Ajouter".
+    Dans la fenêtre s'ouvrant, entrez le nom du groupe.
+    Pour confirmer, cliquez sur "OK", si vous souhaitez abandonner la création, cliquez sur "Annuler".
+    La création du nouveau groupe creera un projet associer à ce groupe.
+    
+image::ajouterGroupe.png[]
+    
+==== Modifier une étudiant :
+
+    Dans la sous-partie "Etudiant", cliquez sur "Modifier".
+    Dans la fenêtre s'ouvrant, sélectionner l'étudiant en double cliquant dessus.
+    Vous pourrez alors modifier l'étudiant dans la fenêtre qui s'ouvre.
+    Pour valider, cliquer sur "OK".
+    
+image::modifierEtudiant.png[]
+image::modifierEtudiant2.png[]
+
+
+    
+==== Modifier un intervenant :
+
+    Dans la sous-partie "Intervenant", cliquez sur "Modifier".
+    Dans la fenêtre s'ouvrant, sélectionner l'intervenant en double cliquant dessus.
+    Vous pourrez alors modifier l'intervenant dans la fenêtre qui s'ouvre.
+    Pour valider, cliquer sur "OK".
+    
+image::modifierInter.png[]
+image::modifierInter2.png[]
+    
+==== Modifier un sujet :
+
+    Dans la sous-partie "Sujet", cliquez sur le bouton "Modifier".
+    Dans la fenêtre s'ouvrant, sélectionner le sujet voulut et cliquez sur le bouton "Modifier".
+    Vous pourrez alors modifier le sujet dans la fenêtre qui s'ouvre.
+    Il ne vous reste qu'à confirmer en cliquant sur "OK".
+    
+image::modifierSujets.png[]
+
+
+    ce qui ouvre 
+
+image::modifierSujetsSuite.png[]
+ 
+==== modifier un groupe :   
+    Dans la sous partie "groupe", cliquez sur "Modifier".
+    Dans la fenêtre s'ouvrant, sélectionner le groupe voulut et double-cliquer.
+    Vous pourrez alors modifier le groupe dans la fenêtre qui s'ouvre.
+    Il ne vous reste qu'à confirmer en cliquant sur "OK".
+    
+image::modifierGroupe.png[]
+
+==== Supprimer un groupe/projet :
+
+    Dans la sous partie "Projet" ou "groupe", cliquez sur "Supprimer".
+    Dans la fenêtre s'ouvrant, sélectionner le projet voulut et double-cliquer.
+    Supprimer le projet supprimera également le groupe associer, et verçi-verça
+    
+image::supprimerProjet.png[]
+
+==== Supprimer un étudiant :
+    
+    Dans la sous partie "Etudiant", cliquez sur "Supprimer".
+    Dans la fenêtre s'ouvrant, sélectionner l'étudiant voulut et double-cliquer.
+    
+image::supprimerEtudiant.png[]
+    
+==== Supprimer un intervenant :
+    
+    Dans la sous partie "Intervenant", cliquez sur "Supprimer".
+    Dans la fenêtre s'ouvrant, sélectionner l'intervenant voulut et double-cliquer.
+    
+image::supprimerInter.png[]
+    
+==== Supprimer un sujet :
+    
+    Dans la sous-partie "Sujet", cliquez sur le bouton "Supprimer".
+    Dans la fenêtre s'ouvrant, sélectionner le sujet voulut et double-cliquer.
+    
+image::supprimerSujets.png[]
+    
+==== Afficher la liste des étudiants (en indiquant le groupe, le sujet, le projet et l’ensemble des intervenants du projet) :
+
+    Dans la sous-partie "Etudiant", cliquez sur le bouton "Lister".
+    Ici, vous aurez une liste de tous les étudiants, ainsi que leur projet, le sujet, client, superviseur et support technique.
+    
+image::listeEtu.png[]
+
+==== Afficher la liste des intervenants (en indiquant pour chaque projet, le sujet, le rôle, le groupe et le projet) :
+
+    Dans la sous-partie "Intervenant", cliquez sur le bouton "Lister".
+    Ici, vous aurez une liste de tous les intervenants, ainsi que leur groupe, ID de projet, nom de projet.
+    
+image::listeIntervenant.png[]
+
+==== Afficher la liste des sujets :
+
+    Dans la sous-partie "Sujet", cliquez sur le bouton "Lister".
+    Ici, vous aurez une liste de tous les sujet.
+    
+image::listerSujet.png[]
+
+==== Afficher la liste des projets (en indiquant le projet, le sujet, les étudiants et l’ensemble des intervenants du projet) :
+
+    Dans la sous-partie "Projet", cliquez sur le bouton "Lister".
+    Ici, vous aurez une liste de tous les projets, ainsi que leur sujet, les étudiants et l’ensemble des intervenants du projet.
+    
+image::listeProjet.png[]
+
+
+==== Afficher la liste des groupes :
+
+    Dans la sous-partie "Groupe", cliquez sur le bouton "Lister".
+    Ici, vous aurez une liste de tous les groupes.
+    
+image::ListeGroupe.png[]
+
+==== Gerer le sujet d'un projet :
+
+    Dans la sous-partie "Projet", cliquez sur le bouton "Gerer sujet".
+    Double-cliquer sur le projet voulut.
+    Modifier ensuite le projet affecter au projet.
+    
+image::affecterSujet.png[]
+
+==== Affecter un étudiant à un projet :
+
+    Dans la sous-partie "Projet", cliquez sur le bouton "Affecter etudiant".
+    Double-cliquer sur le projet voulut.
+    Ajouter ensuite l'étudiant voulut.
+    
+image::affecterEtudiant.png[]
+
+==== Affecter un intervenant à un projet :
+
+    Dans la sous-partie "Projet", cliquez sur le bouton "Gerer intervenant".
+    Double-cliquer sur le projet voulut.
+    Ajouter ensuite l'intervenant voulut au role voulut.
+    
+image::affecterIntervenant.png[]
+
+==== Retirer un etudiant  d'un projet :
+
+    Dans la sous-partie "Projet", cliquez sur le bouton "Retirer etudiant".
+    Double-cliquer sur le projet voulut.
+    Retirer ensuite l'étudiant voulut.
+    
+image::retirerEtudiant.png[]
+
+==== Gerer les voeux d'un projet :
+
+    Dans la sous-partie "Projet", cliquez sur le bouton "Gerer voeux".
+    Double-cliquer sur le projet voulut.
+    affecter un rang de voeux pour les sujet voulu.
+    
+image::gererVoeux.png[]
+
+
+== Informations
+
+Pour tout renseignement ou demande, veuillez contacter l'équipe à l'adresse suivante :
+
+====
+gaetan.kueny@etu.univ-tlse2.fr
+====

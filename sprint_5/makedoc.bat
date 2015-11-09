@@ -4,8 +4,8 @@
 @echo // COMPILATION documentation technique et utilisateur
 @echo ///////////////////////////////////////////////////////
 
-python %ASCIIDOCDIR%asciidoc.py -a toc -a toclevels=4 -o %DOCDIR%documentation_utilisateur.html %SRCDOCDIR%documentation_utilisateur.adoc
-python %ASCIIDOCDIR%asciidoc.py -a toc -a toclevels=4 -o %DOCDIR%documentation_technique.html %SRCDOCDIR%documentation_technique.adoc
+python %ASCIIDOCDIR%asciidoc.py -a toc -a toclevels=4 -o %DOCDIR%documentation_utilisateur_OPTI.html %SRCDOCDIR%documentation_utilisateur_OPTI.adoc
+python %ASCIIDOCDIR%asciidoc.py -a toc -a toclevels=4 -o %DOCDIR%documentation_technique_OPTI.html %SRCDOCDIR%documentation_technique_OPTI.adoc
 
 @echo ///////////////////////////////////////////////////////
 @echo // COMPILATION de la Javadoc

@@ -1,0 +1,524 @@
+= Documentation technique sprint_4bis
+
+:Author:  Pol-Hervé RAILLARD, Nicolas RIBEREAU, Kueny Gaëtan, Kozlowski Nigel
+
+:doctitle: Documentation du Projet MPA-M3301-G2B1
+
+:copyright: {date={localdate}}, {slideshowlocation} *** {author} *** Powered by AsciiDoc and W3C Slidy &#169;
+
+
+include::docConf.txt[]
+
+
+:toc:
+
+
+== Présentation
+
+
+
+=== Présentation de l'application :
+
+* Notre application de gestion OPTI, réalisée dans le cadre du module MPA, permet aux professeurs :
+
+
+
+** de gérer tous les acteurs de projets tutorés dans les projets
+
+** de gérer l’affectation semi-automatique des projets aux groupes étudiants
+
+** de gérer la publication des informations destinées aux différents intervenants et aux progiciels institutionnels
+
+** de gérer l'évaluation de chaque projet
+
+
+
+* Membres de l'équipe :
+
+** JACQUOT Alex
+
+** KOZLOWSKI Nigel
+
+** KUENY Gaëtan
+
+** PEZOU Mathis
+
+** RAILLARD Pol-Hervé
+
+** RIBEREAU Nicolas
+
+
+
+=== Univesité Toulouse 2 Jean Jaurès
+
+
+
+ L’Université Toulouse - Jean Jaurès, université d’arts, lettres et langues et sciences humaines et sociales, est membre fondateur du PRES Université de Toulouse. Héritière de la faculté des lettres, elle s’enracine dans une tradition de plusieurs siècles et s’inscrit dans une longue tradition d’humanisme et d’ouverture disciplinaire. Créée en 1229, elle connaît au XVIème siècle, une grande renommée, puisqu’elle accueille des humanistes prestigieux tels Michel Servet, Étienne Dolet, Michel de l'Hospital, Rabelais et probablement Montaigne. En 1808, devenue Université impériale, elle regroupe les Facultés de Théologie Catholique et Protestante, des Lettres, de Droit, des Sciences et une école de Médecine. Au XXe siècle, l'Université des Lettres atteint son plein développement : elle quitte le centre-ville en 1968 pour s'installer définitivement en 1971 dans le nouveau quartier du Mirail. En 1984, c’est la loi Savary qui lui donne ses structures actuelles : trois Conseils et des Unités de Formation et de Recherche. Depuis, ses effectifs ont presque doublé : de 14 000 étudiants en 1984, elle est passée aujourd'hui à plus de 23 000. Outre les arts, lettres et langues et les sciences humaines et sociales, y sont également enseignées les mathématiques informatiques mais également les sciences économiques et de gestion.
+
+
+
+=== IUT de Blagnac
+
+
+
+ Rattaché à l’Université Toulouse Le Mirail, l’Institut Universitaire de Technologie (IUT) de Blagnac constitue une originalité qui fait son succès en : 
+    - Alliant les enseignements fondamentaux et les disciplines technologiques
+    - Associant les enseignants-chercheurs, les enseignants du second degré et les industriels
+    - Offrant aux étudiants un encadrement rapproché et la fréquentation de l’Entreprise
+
+
+
+=== DUT INFO S3/Module MPA
+
+
+
+
+
+== Application
+
+
+
+=== Backlog du produit
+
+Les fonctionnalités demandées sont ici répertoriées par versions, chacune évoluant au fur et à mesure :
+
+==== Backlog V0 :
+
+* Ajout de contenu des fichiers :
+**  Ajouter dans liste des sujets.
+**  Ajouter dans liste des projets.
+
+* Modification de contenu des fichiers :
+**  Modifier dans liste des sujets.
+**  Modifier dans liste des projets.
+
+* Suppression de contenu des fichiers :
+**  Supprimer dans la liste des sujets.
+**  Supprimer dans la liste des projets.
+
+*  Lister/Filtrer le contenu des fichiers :
+**  Afficher la liste des étudiants (en indiquant le groupe, le sujet, le projet et l’ensemble des intervenants du projet).
+**  Afficher la liste des intervenants (en indiquant pour chaque projet, le sujet, le rôle, le groupe et le projet).
+**  Afficher la liste des sujets.
+**  Afficher la liste des projets/groupes (en indiquant le projet, le sujet, les étudiants et l’ensemble des intervenants du projet).
+
+==== Backlog V1 :
+
+* Ajout de contenu des fichiers :
+**  Ajouter dans la liste des étudiants.
+**  Ajouter dans liste des intervenants.
+**  Ajouter dans liste des sujets.
+**  Ajouter dans liste des projets.
+
+* Modification de contenu des fichiers :
+**  Modifier dans la liste des étudiants.
+**  Modifier dans liste des intervenants.
+**  Modifier dans liste des sujets.
+**  Modifier dans liste des projets.
+
+* Suppression de contenu des fichiers :
+**  Supprimer dans la liste des étudiants.
+**  Supprimer dans la liste des intervenants.
+**  Supprimer dans la liste des sujets.
+**  Supprimer dans la liste des projets.
+
+*  Lister le contenu des fichiers :
+**  Afficher la liste des étudiants (en indiquant le groupe, le sujet, le projet et l’ensemble des intervenants du projet).
+**  Afficher la liste des intervenants (en indiquant pour chaque projet, le sujet, le rôle, le groupe et le projet).
+**  Afficher la liste des sujets.
+**  Afficher la liste des projets/groupes (en indiquant le projet, le sujet, les étudiants et l’ensemble des intervenants du projet).
+
+==== Backlog V2 :
+
+* Ajout de contenu des fichiers :
+**  Ajouter dans la liste des étudiants.
+**  Ajouter dans liste des intervenants.
+**  Ajouter dans liste des sujets.
+**  Ajouter dans liste des projets.
+
+* Modification de contenu des fichiers :
+**  Modifier dans la liste des étudiants.
+**  Modifier dans liste des intervenants.
+**  Modifier dans liste des sujets.
+**  Modifier dans liste des projets.
+
+* Suppression de contenu des fichiers :
+**  Supprimer dans la liste des étudiants.
+**  Supprimer dans la liste des intervenants.
+**  Supprimer dans la liste des sujets.
+**  Supprimer dans la liste des projets.
+
+*  Lister le contenu des fichiers :
+**  Afficher la liste des étudiants (en indiquant le groupe, le sujet, le projet et l’ensemble des intervenants du projet).
+**  Afficher la liste des intervenants (en indiquant pour chaque projet, le sujet, le rôle, le groupe et le projet).
+**  Afficher la liste des sujets.
+**  Afficher la liste des projets/groupes (en indiquant le projet, le sujet, les étudiants et l’ensemble des intervenants du projet).
+** Afficher tous les sujets saisis en voeux n°X. (ne sera pas implémenté)
+** Afficher en fonction d'un sujet le classement attribué par les groupes d'étudiants. (ne sera pas implémenté)
+** Afficher en fonction d'un sujet le classement attribué par les groupes d'étudiants, sans compter ceux qui ont déjà un sujet. (ne sera pas implémenté)
+
+* Affection :
+** Saisie des voeux de chaque étudiants (sous la forme d'un classement de 1 à nombreDeSujets).
+** Création d'un nouveau projet en sélectionnant un sujet et un groupe.
+** Affectation d'un intervenant à un projet et assignement à un rôle (superviseur, support technique ou rapporteur).
+
+
+== Plans de tests
+
+
+
+=== Interface graphique
+
+Rappel: lorsqu'un groupe est crée, un projet est crée est lui est affilié. Ainsi, si on supprime un projet cela supprimera également le groupe et verçi-verça.
+
+* Liste des tests graphiques de l'interface de l'application:
+
+Toutes les actions ci-dessous se réalisent dans l'onglet 'option'
+
+.Tests graphiques pour 'option'
+[width="100%",options="header"]
+|====================
+| Test | Initialisation | Action | Vérification | Réussite
+| Voir A propos | Ouvrir l'application  | Dérouler le menu option et cliquer sur A propos| une fenetre A propos doit s'ouvrire avec les informations demander au sprint_0 | OK
+|====================
+
+Toutes les actions ci-dessous se réalisent dans la partie 'projets'
+
+.Tests graphiques pour la partie projet
+[width="100%",options="header"]
+|====================
+| Test | Initialisation | Action | Vérification | Réussite
+| Lister les projets | Ouvrir l'application  | cliquer sur "Lister" |  Vérifier si tout les projets sont correctement affichés | OK
+| Supprimer un projet | Ouvrir l'application et cliquer sur "Supprimer" dans la partie 'projet'| double-cliquer sur un projet  |  Lister les projets et vérifier que le projet à bien été supprimer, lister les étudiants et vérifier qu'aucun étudiant n'est affilié au groupe supprimé et enfin lister les intervenant et vérifié qu'aucun est affilié au projet supprimer| OK
+| Affecter un sujet à un projet | Ouvrir l'application et cliquer sur "Gerer Sujets" | Double-cliquez sur un projet et affilié lui un projet différent | Lister les projets et vérifier que le sujet du projet a correctement été modifier | OK
+| Affecter des étudiants à un projet | Ouvrir l'application et cliquer sur "Affecter étudiant" | Double-cliquez sur un projet et affectez lui un étudiant parmi la liste | Lister les projets et vérifier que l'étudiant à bien été ajouté au  projet modifier | OK
+| Retirer des étudiants à un projet | Ouvrir l'application et cliquer sur "Retirer étudiant" | Double-cliquez sur un projet et retirez lui un étudiant parmi la liste | Lister les projets et vérifier que l'étudiant à bien été supprimer du projet modifier | OK
+| Gerer les intervenants d'un projet | Ouvrir l'application et cliquer sur "Gerer intervenants" | Double-cliquez sur un projet et modifiez lui les différents intervenants | Lister les projets et vérifier que les modifications ont bien été prisent en compte| OK
+| Gerer les voeux d'un projet | Ouvrir l'application et cliquer sur "Gerer Voeux" | Double-cliquez sur un projet et affectez lui un ordre de priorité pour chaque sujet | allez dans le dossier data et ouvrer le fichier "voeux.csv", réperer les lignes concernant le groupe modifier et vérifiez les priorités| OK
+|====================
+
+Toutes les actions ci-dessous se réalisent dans la partie 'Groupe'
+
+.Tests graphiques pour la partie Groupe
+[width="100%",options="header"]
+|====================
+| Test | Initialisation | Action | Vérification | Réussite
+| Lister les groupes | Ouvrir l'application  | cliquer sur "Lister" |  Vérifier si tout les groupes sont correctement affichés | OK
+| Ajouter un groupe | Ouvrir l'application  et cliquer sur "Ajouter" | rentrer un nom de groupe | Lister les groupe et vérifiez si le groupes à bien été ajouté, listez également les projets et vérifiez qu'un projet à été affecter au groupe créer | OK
+| Modifier un groupe | Ouvrir l'application et cliquer sur "Modifier" | double-cliquer sur un groupe et modifier son nom | Lister les groupes et vérifier si le groupe à bien été modifier | OK
+| Supprimer un groupe | Ouvrir l'application et cliquer sur "Supprimer" | double-cliquer sur un groupe afin de le supprimer | Lister les groupes et vérifier si le groupe à bien été supprimer, lister également les projets et vérifier que le projet affecter au groupe à bien été supprimer lui aussi | OK
+|====================
+
+Toutes les actions ci-dessous se réalisent dans la partie 'Sujet'
+
+.Tests graphiques pour la partie Sujet
+[width="100%",options="header"]
+|====================
+| Test | Initialisation | Action | Vérification | Réussite
+| Lister les Sujets | Ouvrir l'application  | cliquer sur "Lister" |  Vérifier si tout les sujets sont correctement affichés | OK
+| Creer un sujet | Ouvrir l'application  et cliquer sur "Creer" | Remplir les champs demander | Lister les sujets et vérifier si le sujet à bien été ajouté, | OK
+| Modifier un sujet | Ouvrir l'application et cliquer sur "Modifier" | double-cliquer sur un sujet et modifier les différents champs | Lister les sujets et vérifier si le sujet à bien été modifier | OK
+| Supprimer un sujet | Ouvrir l'application et cliquer sur "Supprimer" | double-cliquer sur un sujet afin de le supprimer | Lister les sujet et vérifier si le sujet à bien été supprimer, lister également les projets et vérifier que les projets affecter au sujet, n'ont plus de sujet affecter | OK
+|====================
+
+Toutes les actions ci-dessous se réalisent dans la partie 'Intervenant'
+
+.Tests graphiques pour la partie Intervenant
+[width="100%",options="header"]
+|====================
+| Test | Initialisation | Action | Vérification | Réussite
+| Lister les intervenants | Ouvrir l'application  | cliquer sur "Lister" |  Vérifier si tout les intervenants sont correctement affichés| OK
+| Creer un intervenant | Ouvrir l'application  et cliquer sur "Creer" | Remplir les champs demander | Lister les intervenants et vérifier si l'intervenant à bien été ajouté, | OK
+| Modifier un intervenant | Ouvrir l'application et cliquer sur "Modifier" | double-cliquer sur un intervenant et modifier les différents champs | Lister les intervenant et vérifier si l'intervenant à bien été modifier | OK
+| Supprimer un intervenant | Ouvrir l'application et cliquer sur "Supprimer" | double-cliquer sur un intervenant afin de le supprimer | Lister les intervenants et vérifier si l'intervenant à bien été supprimer, lister également les projets et vérifier que les projets affecter à l'intervenant, n'ont plus cet intervenant | OK
+|====================
+
+Toutes les actions ci-dessous se réalisent dans la partie 'Etudiant'
+
+.Tests graphiques pour la partie Etudiant
+[width="100%",options="header"]
+|====================
+| Test | Initialisation | Action | Vérification | Réussite
+| Lister les Etudiants | Ouvrir l'application  | cliquer sur "Lister" |  Vérifier si tout les Etudiants sont correctement affichés| OK
+| Creer un Etudiant | Ouvrir l'application  et cliquer sur "Creer" | Remplir les champs demander | Lister les Etudiants et vérifier si l'etudiant à bien été ajouté, | OK
+| Modifier un étudiant | Ouvrir l'application et cliquer sur "Modifier" | double-cliquer sur un étudiant et modifier les différents champs | Lister les étudiants et vérifier si l'étudiant à bien été modifier | OK
+| Supprimer un étudiant | Ouvrir l'application et cliquer sur "Supprimer" | double-cliquer sur un étudiant afin de le supprimer | Lister les étudiants et vérifier si l'étudiant à bien été supprimer, lister également les projets et vérifier que les projets affecter à l'étudiant, n'ont plus cet étudiant | OK
+|====================
+
+=== Librairie CSV
+
+.Tests Librairie CSV
+[width="100%",options="header"]
+|====================
+| Test  | Vérification | Réussite
+| readCSV() | L'ArrayList de tableaux de String renvoyés contient les bonnes informations | Ok
+| saveCSV()  | Enregistre les bonnes informations dans le fichier sauvegardé | OK 
+|====================
+
+=== Classe Etudiants
+
+.Tests Classe Etudiants
+
+[width="100%",option="header"]
+|====================
+| Test  | Vérification | Réussite
+|getAllEtu()|récupère la liste de tous les étudiants| OK
+|getEtu (int id)|récupère l'étudiant portant l'id passer en paramètre| OK
+|getEtuByName (String nom)|récupère la liste des étudiant portant le nom passer en paramètre| OK
+|getEtuByFirstName()|récupère la liste des étudiant portant le prénom passer en paramètre| OK
+|getNbEtu()|Retourne le nombre d'étudiants dans la liste| OK
+|getAffichage()|Affiche les étudiants de la liste avec les projets, sujet,groupe et intervenant affilié| OK
+|setGroupe()|modifie le groupe d'un étudiant| OK
+|setEtudiant()|modifie un étudiant| OK
+|addEtudiant()|Permet l'ajout d'un étudiant| OK
+|removeGroupeInEtudiant()|Supprime l'étudiant d'un groupe d'étudiants| OK
+|removeEtudiant()|Supprime un étudiant| OK
+|====================
+
+
+=== Classe Intervenants
+
+.Tests Classe Intervenants
+
+[width="100%",option="header"]
+|====================
+| Test  | Vérification | Réussite
+|getAllIntervenants()|récupère la liste de tous les intervenants| OK
+|getIntervenantsByFirstName|Retourne un intervenant en cherchant une chaîne de caractère dans son prénom| OK
+|addIntervenant()|ajoute un intervenant| OK
+|getIntervenantsByName()|Retourne un intervenant en cherchant une chaîne de caractère dans son nom| OK
+|setIntervenants()|Modifie les valeurs d'un intervenant| OK
+|getNbIntervenants()|Retourne le nombre d'intervenant dans la liste| OK
+|getAffichage()|Affiche la liste d'intervenant| OK
+|removeIntervenant()|Supprime un intervenant de la liste| OK
+|getIntervenants_byID()|Retrouve un intervenant par son ID| OK
+|====================
+
+
+=== Classe Projets
+
+.Tests Classe Projets
+
+[width="100%",option="header"]
+|====================
+|getNbProjets()|Retourne le nombre de projets contenus dans le fichier| OK
+|getProject()|Retourne un projet| OK
+|getAllProjets()|Retourne les projets contenus dans les fichiers| OK
+|getProjectByNom()|Retourne un projet en cherchant une chaîne de caractère dans son nom| OK
+|====================
+
+=== Classe Sujets
+
+.Tests Classe Sujets
+
+[width="100%",option="header"]
+|====================
+| Test  | Vérification | Réussite
+|addSubject()|Ajoute un sujet| OK
+|getSubjectByNom()|Retourne un sujet en cherchant une chaîne de caractère dans son nom| OK
+|setSubject|Modifie un sujet| OK
+|removeSujet()|Supprime un sujet| OK
+|getNbSujets|Retourne le nombre de sujet| OK
+|getAllSujets()|Affiche tous les sujets| OK
+|getSujet()|Affiche un sujet précis| OK
+|====================
+
+=== Classe Encadrer
+
+.Tests Classe Encadrer
+
+[width="100%",option="header"]
+|====================
+| Test  | Vérification | Réussite
+|getAllEncadrer()|Retourne le contenu du fichier encadrer.csv sous forme d'une ArrayList| OK
+|getNbEncadrer()|Retourne le nombre de ligne de fichier encadrer.csv| OK
+|getAllEncadrerForIdProjet(String id)|Retourne le les ligne du fichier encadrer.csv conrespondant à l'id du projet passer en parametre| OK
+|addEncadrer(String idProjet, String idIntervenant, String idRole)|Ajoute bien une ligne dans le fichier encadrer.csv avec les informations passer en parametre| OK
+|removeEncadrer(String id, String idIntervenant)|retire bien toute les lignes contenant les deux inforamtions passer en parametre| OK
+|====================
+
+== Modèles d'analyses
+
+Nous avons réalisé cette application en suivant l'architecture MVC (modèle, vue, contrôleur).
+
+Le modèle contient la librairie CSV, le contrôleur contient le fichier créant la fenêtre d'accueil, et la vue contient toutes les fenêtres.
+
+== Diagrammes
+
+=== Diagramme des classes
+
+image::diagrammeClasse.png[]
+
+=== Diagramme des Use case
+
+image::UC.png[]
+
+
+=== Diagramme des classes participantes
+
+image::DCP.png[]
+
+=== Diagramme des classes Model
+
+image::DCM.png[]
+
+== Nom des classes utilisés
+
+=== Controleur
+    Le controleur lance la vue principal.
+    
+=== FenetrePrincipal
+    La FenetrePrincipal est la vue qui permet d'accéder à toute les autres.
+
+=== DialAffecterIntervenant
+    DialAffecterIntervenant est la fenêtre permettant d'affecter un client, un support technique et un superviseur à un projet.
+    
+=== DialAffecterSujet
+    DialAffecterSujet est la fenêtre permettant d'affecter un sujet à un projet.
+    
+=== DialAffecterVoeux
+    DialAffecterVoeux est la fenêtre permettant d'affecter les différents voeux à un projet.
+    
+=== DialAffecterSuite
+    DialAffecterSuite est la suite de la fenêtre permettant d'affecter les différents voeux à un projet.
+    
+=== DialAjouterEtudiantsProjet
+    DialAjouterEtudiantsProjet est la fenetre permettant d'ajouter un étudiant à un projet.
+    
+=== DialAjouterLogin
+    DialAjouterLogin est la fenetre permettant d'ajouter un administrateur.
+
+=== DialAPropos
+    DialAPropos est la fenêtre affichant le "A Propos" du projet.
+    
+=== DialCreerEtudiant
+    DialCreerEtudiant est le fenêtre permettant de creer un étudiant.
+
+=== DialCreerGroupe
+    DialCreerGroupe est la fenêtre permettant de creer un groupe.
+
+=== DialCreerIntervenant
+    DialCreerIntervenant est la fenêtre permettant de creer un intervenant.
+
+=== DialCreerSujet
+    DialCreerSujet est la fenêtre permettant de creer un nouveau sujet.
+
+=== DialListeEtudiant
+    DialListeEtudiant est la fenêtre permettant d'afficher la liste des étudiants.
+    
+=== DialListAjoutEtudiantProjet
+    DialListAjoutEtudiantProjet est la fenetre permettant de lister les projets auquel on peut ajouter des étudiants.
+
+=== DialListerEtudiant
+    DialListerEtudiant est la fenêtre permettant d'afficher la liste des etudiants.
+
+=== DialListeProject
+    DialListeProject est la fenêtre permettant d'afficher la liste des projets.
+
+=== DialListerGroupe
+    DialListerGroupe est la fenêtre permettant d'afficher la liste des groupes.
+
+=== DialListerIntervenant
+    DialListerIntervenant  est la fenêtre permettant de lister les intervenants.
+
+=== DialListerProjet
+    DialListerProjet est la fenetre permettant de lister les projets.
+    
+=== DialListerSujet
+    DialListerSujet est la fentre permettant de lister les sujets.
+    
+=== DialListLogin 
+    DialListLogin est la fentre permettant de lister les administrateurs.
+    
+=== DialListProjetIntervenant
+    DialListProjetIntervenant est la fenetre permettant de lister les projets auquel on peut ajouter des intervenants.
+    
+=== DialListProjetSujet
+    DialListProjetSujet est la fenetre permettant de lister les projets auquel on peut ajouter un sujet.
+    
+=== DialListSupprEtudiantProjet
+    DialListSupprEtudiantProjet  est la fenetre permettant de lister les projets auquel on peut supprimer des étudiants.
+    
+=== DialLogin
+    DialLogin est la fenetre permettant de laisser l'accès à l'application qu'aux administrateurs muni de login et du mot de passe.
+    
+=== DialModifierEtudiant
+    DialModifierEtudiant est la fenetre permettant de modifier un etudiant.
+    
+=== DialModifierGroupe
+    DialModifierGroupe est la fenetre permettant de modifier le nom d'un groupe.
+    
+=== DialModifierIntervenant
+    DialModifierIntervenant est la fenetre permettant de modifier un intervenant.
+    
+=== DialModifierSujet
+    DialModifierSujet est la fenetre permettant de modifier un sujet.
+    
+=== DialSupprimerEtudiant
+    DialSupprimerEtudiant est la fenetre permettant de supprimer un etudiant.
+
+=== DialSupprimerEtudiantsProjet
+    DialSupprimerEtudiantsProjet est la fenetre permettant de supprimer un etudiant d'un projet.
+
+=== DialSupprimerGroupe
+    DialSupprimerGroupe est la fenetre permettant de supprimer un groupe.
+    
+=== DialSupprimerIntervenant
+    DialSupprimerIntervenant est la fenetre permettant de supprimer un intervenant.
+    
+=== DialSupprimerProjet
+    DialSupprimerProjet est la fenetre permettant de supprimer un projet.
+  
+=== DialSupprimerSujet
+    DialSupprimerSujet est la fenetre permettant de supprimer un projet.
+  
+=== CSVLibrairie
+    CSVLibrairie permet d'écrire dans les fichier csv.
+
+=== Encadrer
+    Encadrer représente le contenu du fichier encadrer.csv
+
+=== Etudiants
+    Etudiants représente le contenu du fichier etudiants2014_2015.csv
+    
+=== Groupe
+    Groupe représente le contenu du fichier groupe.csv
+    
+=== Intervenants
+    Intervenants représente le contenu du fichier intervenants2014_2015.csv
+ 
+=== Projets
+    Projets représente le contenu du fichier projets2014_2015.csv   
+    
+=== Role
+    Role représente le contenu du fichier role2014_2015.csv  
+    
+=== Sujets
+    Sujets représente le contenu du fichier sujets2014_2015.csv  
+    
+=== Voeux
+    Voeux représente le contenu du fichier voeux2014_2015.csv  
+    
+== Choix Techniques
+
+    Lors du sprint_1bis il a été décidé que lorsque l'on créer un nouveau groupe, un nouveau projet est crée.
+    Ainsi un projet est lié à un groupe dès sa création et ne peut en changer.
+    
+== Algorithmes implémentés
+
+
+La complexité de l'application est trop faible pour implémenter un véritable algorithme.
+
+
+
+== Informations
+
+
+
+Pour tout renseignement ou demande, veuillez contacter l'équipe à l'adresse suivante :
+
+
+ gaetan.kueny@etu.univ-tlse2.fr
+
+
+
