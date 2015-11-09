@@ -10,13 +10,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-
 import model.Encadrer;
 import model.Etudiants;
 import model.Intervenants;
 import model.Projets;
 import model.Sujets;
-
 
 /**
  * MakeOPTIweb permet de créer une page html de consultation des projets tutorés gérés par OPTI.
@@ -49,7 +47,7 @@ public class MakeOPTIweb {
 		String intJSON = "";
 		String etuJSON = "";
 		
-		System.out.println("HTML :\n0/8");
+		System.out.println("HTML :0/8");
 		HTMLEcrase();
 		
 		System.out.println("1/8");
