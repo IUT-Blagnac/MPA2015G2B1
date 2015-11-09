@@ -13,7 +13,6 @@ pause
 @echo ///////////////////////////////////////////////////////
 
 if "%MAKETEST%"=="1" (
- rem cd %BINDIR%
  "%JAVA_HOME%\bin\java" -cp bin;./tools/junit.jar;./model model.MakeOPTIwebTest
  )
 

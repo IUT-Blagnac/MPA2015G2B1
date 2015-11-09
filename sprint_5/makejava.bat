@@ -3,8 +3,7 @@
 @echo ///////////////////////////////////////////////////////
 
 if "%MAKETEST%"=="1" (
-rem "%JAVA_HOME%\bin\javac" -Xlint:unchecked -encoding utf-8 -cp .;./tools/junit.jar -d %BINDIR% .\src\controler\\*.java .\src\model\\*.java .\src\view\\*.java
-"%JAVA_HOME%\bin\javac" -Xlint:unchecked -encoding utf-8 -cp ./src;./tools/junit.jar -d %BINDIR% .\src\controler\Controleur.java .\src\model\\*.java
+"%JAVA_HOME%\bin\javac" -Xlint:unchecked -encoding utf-8 -cp ./src;./tools/junit.jar -d %BINDIR% .\src\controler\\*.java .\src\model\\*.java
 )
 
 pause
