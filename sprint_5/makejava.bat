@@ -14,12 +14,12 @@ pause
 
 if "%MAKETEST%"=="1" (
  rem cd %BINDIR%
- "%JAVA_HOME%\bin\java" -cp bin;./tools/junit.jar;./model model.TestCSVLibrairie
- "%JAVA_HOME%\bin\java" -cp bin;./tools/junit.jar;./model model.TestEtudiants
- "%JAVA_HOME%\bin\java" -cp bin;./tools/junit.jar;./model model.TestEncadrer
- "%JAVA_HOME%\bin\java" -cp bin;./tools/junit.jar;./model model.TestGroupe
- "%JAVA_HOME%\bin\java" -cp bin;./tools/junit.jar;./model model.TestIntervenants
- "%JAVA_HOME%\bin\java" -cp bin;./tools/junit.jar;./model model.TestProjets
- "%JAVA_HOME%\bin\java" -cp bin;./tools/junit.jar;./model model.TestSujets
+ "%JAVA_HOME%\bin\java" -Dfile.encoding=UTF8 -cp bin;./tools/junit.jar;./model model.TestCSVLibrairie
+ "%JAVA_HOME%\bin\java" -Dfile.encoding=UTF8 -cp bin;./tools/junit.jar;./model model.TestEtudiants
+ "%JAVA_HOME%\bin\java" -Dfile.encoding=UTF8 -cp bin;./tools/junit.jar;./model model.TestEncadrer
+ "%JAVA_HOME%\bin\java" -Dfile.encoding=UTF8 -cp bin;./tools/junit.jar;./model model.TestGroupe
+ "%JAVA_HOME%\bin\java" -Dfile.encoding=UTF8 -cp bin;./tools/junit.jar;./model model.TestIntervenants
+ "%JAVA_HOME%\bin\java" -Dfile.encoding=UTF8 -cp bin;./tools/junit.jar;./model model.TestProjets
+ "%JAVA_HOME%\bin\java" -Dfile.encoding=UTF8 -cp bin;./tools/junit.jar;./model model.TestSujets
  rem cd %SPRINTDIR%
  )

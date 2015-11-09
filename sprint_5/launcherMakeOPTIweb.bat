@@ -2,5 +2,5 @@
 set BINDIR=./bin
 cd %BINDIR%/..
 call makeOptiWeb.bat
-java -classpath bin controler.MakeOPTIweb
+java -Dfile.encoding=UTF8 -classpath bin controler.MakeOPTIweb
 

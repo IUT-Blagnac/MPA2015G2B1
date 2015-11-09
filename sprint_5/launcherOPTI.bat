@@ -1,4 +1,4 @@
 @echo off 
 set BINDIR=./bin
 cd %BINDIR%/..
-java -classpath bin controler.Controleur
+java -Dfile.encoding=UTF8 -classpath bin controler.Controleur

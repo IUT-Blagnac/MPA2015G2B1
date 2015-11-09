@@ -13,7 +13,7 @@ pause
 @echo ///////////////////////////////////////////////////////
 
 if "%MAKETEST%"=="1" (
- "%JAVA_HOME%\bin\java" -cp bin;./tools/junit.jar;./model model.MakeOPTIwebTest
+ "%JAVA_HOME%\bin\java" -Dfile.encoding=UTF8 -cp bin;./tools/junit.jar;./model model.MakeOPTIwebTest
  )
 
 pause
